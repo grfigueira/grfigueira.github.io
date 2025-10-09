@@ -38,7 +38,7 @@
         <a href="#" class="font-medium cursor-pointer">Guilherme Figueira</a>
 
         <nav class="justify-self-center hidden sm:flex text-sm text-mutedLight dark:text-mutedDark">
-          <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150" href="#projects">Projects</a>
+          <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150" href="#projects">Game Projects</a>
           <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150" href="#about">About</a>
           <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150" href="#contact">Contact</a>
         </nav>
@@ -145,30 +145,36 @@
 
       <!-- Projects -->
       <section id="projects" class="mt-6">
-        <h2 class="text-lg font-medium mb-3">Projects</h2>
+        <h2 class="text-lg font-medium mb-3">Game Projects</h2>
 
         <!-- Row 1: three larger cards -->
         <div class="grid gap-6 md:grid-cols-3">
           <!-- The Naturals' Descent -->
-          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150">
-            <div class="relative w-full pt-[56.25%] overflow-hidden">
-              <img src="assets/images/TNDLogo.png" alt="The Naturals' Descent cover"
-                   class="absolute inset-0 w-full h-full object-cover" />
-              <video
-                muted playsinline loop preload="metadata"
-                poster="assets/images/TNDLogo.png"
-                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-                src="assets/videos/TND.mp4"
-              ></video>
-            </div>
-            <figcaption class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-              <h3 class="text-sm m-0">The Naturals' Descent (2024)</h3>
-              <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Action-Adventure puzzle game.</p>
-            </figcaption>
-          </figure>
+          <a
+            href="projects/the-naturals-descent.html"
+            class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
+            title="Open The Naturals' Descent project page"
+          >
+            <figure class="card relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+              <div class="relative w-full pt-[56.25%] overflow-hidden">
+                <img src="assets/images/TND_new_cover.jpg" alt="The Naturals' Descent cover"
+                     class="absolute inset-0 w-full h-full object-cover" />
+                <video
+                  muted playsinline loop preload="metadata"
+                  poster="assets/images/TND_new_cover.jpg"
+                  class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
+                  src="assets/videos/TND.mp4"
+                ></video>
+              </div>
+              <figcaption class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
+                <h3 class="text-sm m-0">The Naturals' Descent (2024)</h3>
+                <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Action-Adventure puzzle game.</p>
+              </figcaption>
+            </figure>
+          </a>
 
           <!-- Forlorn -->
-          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150">
+          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
             <div class="relative w-full pt-[56.25%] overflow-hidden">
               <img src="assets/images/forlorn.png" alt="Forlorn cover"
                    class="absolute inset-0 w-full h-full object-cover" />
@@ -186,7 +192,7 @@
           </figure>
 
           <!-- Cartoon Campout -->
-          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150">
+          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
             <div class="relative w-full pt-[56.25%] overflow-hidden">
               <img src="assets/images/CartoonCampoutLogo.png" alt="Cartoon Campout cover"
                    class="absolute inset-0 w-full h-full object-cover object-[50%_25%]" />
@@ -207,7 +213,7 @@
         <!-- Row 2: two smaller centered cards -->
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
           <!-- The 7th Floor (WIP) -->
-          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card max-w-[26rem] w-full cursor-pointer transition-colors duration-150">
+          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card max-w-[26rem] w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
             <div class="relative w-full pt-[56.25%] overflow-hidden">
               <img src="https://placehold.co/640x360?text=The+7th+Floor" alt="The 7th Floor placeholder"
                    class="absolute inset-0 w-full h-full object-cover" />
@@ -219,7 +225,7 @@
           </figure>
 
           <!-- EasyDialogueEditor -->
-          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card max-w-[26rem] w-full cursor-pointer transition-colors duration-150">
+          <figure class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card max-w-[26rem] w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
             <div class="relative w-full pt-[56.25%] overflow-hidden">
               <img src="https://placehold.co/640x360?text=EasyDialogueEditor" alt="EasyDialogueEditor placeholder"
                    class="absolute inset-0 w-full h-full object-cover" />
