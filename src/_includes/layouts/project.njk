@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+{% import "blocks.njk" as B %}
+
+{% block header %}
+<header class="sticky top-0 z-10 backdrop-blur bg-bgLight/90 dark:bg-bgDark/90 border-b border-lineLight dark:border-lineDark transition-colors duration-150">
+  <div class="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between gap-4">
+    <a href="/#projects" class="font-medium cursor-pointer">Guilherme Figueira</a>
+    <button id="themeToggle" aria-label="Activate dark mode" aria-pressed="false"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-lineLight dark:border-lineDark bg-white/60 dark:bg-panelDark shadow-sm">
+      <img src="/assets/sun.svg" class="block dark:hidden w-5 h-5" alt="">
+      <img src="/assets/moon.svg" class="hidden dark:block w-5 h-5" alt="">
+    </button>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+  {{ B.Intro(intro) }}
+
+  {% if sections %}
+    {% for s in sections %}
+      {% if s.type == "video" %}
+        {{ B.Video(s) }}
+      {% elif s.type == "two-up" %}
+        {{ B.TwoUp(s) }}
+      {% elif s.type == "text" %}
+        <section class="pb-12 space-y-6 max-w-5xl">
+          {% if s.heading %}<h2 class="text-xl font-medium">{{ s.heading }}</h2>{% endif %}
+          {% if s.text %}<p class="text-mutedLight dark:text-mutedDark max-w-5xl">{{ s.text | safe }}</p>{% endif %}
+        </section>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endblock %}

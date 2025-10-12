@@ -1,0 +1,70 @@
+{# src/_includes/blocks.njk #}
+
+{% macro Intro(data) %}
+<section class="pb-12">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
+    <div class="space-y-3 md:flex-1">
+      <h1 class="text-4xl font-semibold leading-tight">{{ data.title }}</h1>
+      {% if data.summary %}<p class="text-lg text-mutedLight dark:text-mutedDark">{{ data.summary }}</p>{% endif %}
+
+      {% if data.chips %}
+      <div class="flex flex-wrap gap-3 text-sm pt-2">
+        {% for c in data.chips %}
+          <span class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">{{ c }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if data.actions %}
+      <div class="flex flex-wrap items-center gap-3">
+        {% for a in data.actions %}
+          <a href="{{ a.href }}" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full
+             {% if a.primary %} bg-emerald-600 text-white px-4 py-2 {% else %} border border-lineLight dark:border-lineDark bg-white/80 dark:bg-panelDark px-4 py-2 {% endif %}">
+            {{ a.label }}
+          </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if data.header_gif %}
+    <div class="md:flex-shrink-0 w-full md:w-[420px] overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card">
+      <img src="{{ data.header_gif }}" alt="{{ data.header_alt or '' }}" class="w-full h-full object-cover" loading="lazy">
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{% macro Video(data) %}
+{% if data.youtube_id %}
+<section class="pb-12 space-y-6 max-w-3xl">
+  {% if data.heading %}<h2 class="text-xl font-medium">{{ data.heading }}</h2>{% endif %}
+  {% if data.text %}<p class="text-mutedLight dark:text-mutedDark">{{ data.text }}</p>{% endif %}
+  <div class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card bg-black aspect-video">
+    <iframe class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/{{ data.youtube_id }}?rel=0"
+            title="{{ data.title or 'Video' }}" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+  </div>
+</section>
+{% endif %}
+{% endmacro %}
+
+{% macro TwoUp(data) %}
+<section class="pb-12 space-y-6 max-w-5xl">
+  {% if data.heading %}<h2 class="text-xl font-medium">{{ data.heading }}</h2>{% endif %}
+  {% if data.text %}<p class="text-mutedLight dark:text-mutedDark max-w-5xl">{{ data.text }}</p>{% endif %}
+
+  <div class="grid gap-4 md:grid-cols-2">
+    {% for fig in data.figures %}
+      <figure class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+        <img src="{{ fig.src }}" alt="{{ fig.alt or '' }}" class="w-full object-cover" loading="lazy">
+        {% if fig.caption %}<figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">{{ fig.caption }}</figcaption>{% endif %}
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}

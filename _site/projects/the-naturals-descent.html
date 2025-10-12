@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guilherme Figueira — Portfolio</title>
+
+  <!-- Tailwind CDN + your exact config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bgLight: '#f4f8f3',
+            panelLight: '#ededec',
+            lineLight: '#e3e3e2',
+            inkLight: '#121212',
+            mutedLight: '#6b6b6b',
+            bgDark: '#0b1215',
+            panelDark: '#0f171f',
+            lineDark: '#161616',
+            inkDark: '#e7eef5',
+            mutedDark: '#9aa5ae',
+          },
+          boxShadow: { card: '0 10px 24px rgba(0,0,0,0.10)' },
+          borderRadius: { xl2: '1.25rem' },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-bgLight text-inkLight dark:bg-bgDark dark:text-inkDark transition-colors duration-150">
+
+  
+
+  <main class="mx-auto max-w-6xl px-6">
+    
+
+
+<header class="sticky top-0 z-10 backdrop-blur bg-bgLight/90 dark:bg-bgDark/90 border-b border-lineLight dark:border-lineDark transition-colors duration-150">
+  <div class="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between gap-4">
+    <a href="/#projects" class="font-medium cursor-pointer">Guilherme Figueira</a>
+    <button id="themeToggle" aria-label="Activate dark mode" aria-pressed="false"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-lineLight dark:border-lineDark bg-white/60 dark:bg-panelDark shadow-sm">
+      <img src="/assets/sun.svg" class="block dark:hidden w-5 h-5" alt="">
+      <img src="/assets/moon.svg" class="hidden dark:block w-5 h-5" alt="">
+    </button>
+  </div>
+</header>
+
+
+
+  
+<section class="pb-12">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
+    <div class="space-y-3 md:flex-1">
+      <h1 class="text-4xl font-semibold leading-tight">The Naturals&#39; Descent</h1>
+      <p class="text-lg text-mutedLight dark:text-mutedDark">The Naturals&#39; Descent was developed as a group project assignment for the Games and Simulations course at Nova University. The group was composed of 2 programmers, and we also had some help with the world building and story telling from another friend.</p>
+
+      
+      <div class="flex flex-wrap gap-3 text-sm pt-2">
+        
+          <span class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">Team size: 2</span>
+        
+          <span class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">Time Frame: 10 weeks</span>
+        
+          <span class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">Engine: Unity (C#)</span>
+        
+      </div>
+      
+
+      
+      <div class="flex flex-wrap items-center gap-3">
+        
+          <a href="/assets/documents/GDD-TheNaturalsDescent.pdf" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full
+              bg-emerald-600 text-white px-4 py-2 ">
+            View GDD (PDF)
+          </a>
+        
+          <a href="https://gfigueira.itch.io/the-naturals-descent" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full
+              border border-lineLight dark:border-lineDark bg-white/80 dark:bg-panelDark px-4 py-2 ">
+            Play on itch.io
+          </a>
+        
+      </div>
+      
+    </div>
+
+    
+    <div class="md:flex-shrink-0 w-full md:w-[420px] overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card">
+      <img src="/assets/gifs/TND.gif" alt="Gameplay loop overview" class="w-full h-full object-cover" loading="lazy">
+    </div>
+    
+  </div>
+</section>
+
+
+  
+    
+      
+        <section class="pb-12 space-y-6 max-w-5xl">
+          <h2 class="text-xl font-medium">Introduction</h2>
+          <p class="text-mutedLight dark:text-mutedDark max-w-5xl">This was the bigger final project for the Games and Simulations university course. We were given full creative freedom and so we decided to try and create a relatively ambitious action-adventure first person shooter, set in a steampunk desert world. The player can explore the desert in a hover board, fight AI enemies and solve puzzles inside of procedurally generated underground mazes.
+
+The following sections showcase some of my core contributions to the project.
+</p>
+        </section>
+      
+    
+      
+        
+
+<section class="pb-12 space-y-6 max-w-3xl">
+  <h2 class="text-xl font-medium">Video Presentation</h2>
+  <p class="text-mutedLight dark:text-mutedDark">Video showcasing the game and the implementation of the core mechanics. It was required for the project submission.</p>
+  <div class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card bg-black aspect-video">
+    <iframe class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/isLo5lBK4to?rel=0"
+            title="Video" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+  </div>
+</section>
+
+
+      
+    
+      
+        
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Wave Function Collapse</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">For the underground caverns, we knew we wanted them to be procedurally generated. I challenged myself to implement this procedural generation using the Wave Function Collapse algorithm. Because of the project&#39;s ever-closing deadline and since we didn&#39;t really need verticality in the caverns, I applied the 2D version of the algorithm using 3D meshes as the possible tiles.</p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    
+      <figure class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+        <img src="/assets/gifs/WFCTiles.gif" alt="" class="w-full object-cover" loading="lazy">
+        <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">The 3D meshes used as tiles and assignment of side tags.</figcaption>
+      </figure>
+    
+      <figure class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+        <img src="/assets/gifs/WFCVIZU.gif" alt="" class="w-full object-cover" loading="lazy">
+        <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Visualization of the Wave Function Collapse algorithm in action.</figcaption>
+      </figure>
+    
+  </div>
+</section>
+
+      
+    
+      
+        
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Hover Board Mechanic</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">For exploring the desert, we wanted the player to be able to ride some kind of vehicle. We decided that a hover board would be a cool and fitting choice for our steampunk world. The mechanic was inspired by the hover bike found in the game *Sable*.</p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    
+      <figure class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+        <img src="/assets/gifs/TNDBoardInAction.gif" alt="" class="w-full object-cover" loading="lazy">
+        <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Visual demonstration of the hover board physics.</figcaption>
+      </figure>
+    
+      <figure class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+        <img src="/assets/gifs/TNDHoverBoard.gif" alt="" class="w-full object-cover" loading="lazy">
+        <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Hover board in action, exploring the desert.</figcaption>
+      </figure>
+    
+  </div>
+</section>
+
+      
+    
+      
+        <section class="pb-12 space-y-6 max-w-5xl">
+          <h2 class="text-xl font-medium">Source Code</h2>
+          <p class="text-mutedLight dark:text-mutedDark max-w-5xl">You can find the full source code for this project in the following Git repository:
+
+**GamesAndSimulation / ga2024-G2-11**
+
+[Visit repository ↗](https://github.com/GamesAndSimulation/ga2024-G2-11)
+</p>
+        </section>
+      
+    
+  
+
+
+  </main>
+
+  
+
+  <footer class="border-t border-lineLight dark:border-lineDark text-center text-xs text-mutedLight dark:text-mutedDark py-4">
+    Portfolio Last Updated: 2025/10/09
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
