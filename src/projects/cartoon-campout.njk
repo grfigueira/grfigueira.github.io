@@ -1,0 +1,28 @@
+---
+layout: layouts/project.njk
+permalink: "projects/cartooncampout.html"
+
+intro:
+  title: "Cartoon Campout"
+  summary: "This was an experimental project targeting the Meta Quest 3. I wanted to explore the usage of seamless portals to travel between video see-through and a virtual world."
+  chips:
+    - "Team size: 1"
+    - "Time Frame: 2 weeks"
+    - "Engine: Unity (C#) and MetaXR SDK"
+  header_gif: "/assets/gifs/CartoonCampout.gif"
+  header_scale: 1 
+  header_alt: "Gameplay loop overview"
+
+sections:
+  - type: "text"
+    heading: "Introduction"
+    text: |
+      In this very short project, the player can go through a seamless portal into a cozy virtual campsite where they can cook and eat marshmallows and watch old cartoons on the TV.
+  - type: "text"
+    heading: "Technology and Context"
+    text: |
+      The portal is created using a custom stencil shader that either renders a passthrough material (provided by MetaXR) or the virtual world. Although the player can never see it, the portal is actually a 3 dimensional mesh with inverted normals which ensures a seamless transition without clipping. Every iteration uses hand tracking only, no controllers are needed.
+
+      The player can open and close the portal by pressing a physics button, cook and eat marshmallows by the campfire, and watch an old cartoon on the TV after turning it on.
+
+---

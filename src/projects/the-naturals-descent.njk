@@ -10,8 +10,17 @@ intro:
     - "Time Frame: 10 weeks"
     - "Engine: Unity (C#)"
   actions:
-    - { label: "View GDD (PDF)", href: "/assets/documents/GDD-TheNaturalsDescent.pdf", primary: true }
-    - { label: "Play on itch.io", href: "https://gfigueira.itch.io/the-naturals-descent", primary: false }
+    - label: "View GDD (PDF)"
+      href: "/assets/documents/GDD-TheNaturalsDescent.pdf"
+      primary: true
+      icon: "/assets/icons/document.svg"         # file icon
+      icon_class: "w-5 h-5 opacity-95"
+
+    - label: "Play on itch.io"
+      href: "https://gfigueira.itch.io/the-naturals-descent"
+      primary: false
+      icon: "/assets/icons/itchdotio.svg"        # file icon
+      icon_class: "w-5 h-5 dark:invert"
   header_gif: "/assets/gifs/TND.gif"
   header_alt: "Gameplay loop overview"
 
@@ -37,17 +46,15 @@ sections:
 
   - type: "two-up"
     heading: "Hover Board Mechanic"
-    text: "For exploring the desert, we wanted the player to be able to ride some kind of vehicle. We decided that a hover board would be a cool and fitting choice for our steampunk world. The mechanic was inspired by the hover bike found in the game *Sable*."
+    text: "For exploring the desert, we wanted the player to be able to ride some kind of vehicle. We decided that a hover board would be a cool and fitting choice for our steampunk world. The mechanic was inspired by the hover bike found in the game Sable."
     figures:
       - { src: "/assets/gifs/TNDBoardInAction.gif", caption: "Visual demonstration of the hover board physics." }
       - { src: "/assets/gifs/TNDHoverBoard.gif", caption: "Hover board in action, exploring the desert." }
 
-  - type: "text"
+  - type: "source"
     heading: "Source Code"
-    text: |
-      You can find the full source code for this project in the following Git repository:
-
-      **GamesAndSimulation / ga2024-G2-11**
-
-      [Visit repository ↗](https://github.com/GamesAndSimulation/ga2024-G2-11)
+    provider: "GitHub"
+    repo: "GamesAndSimulation / ga2024-G2-11"
+    url: "https://github.com/GamesAndSimulation/ga2024-G2-11"
+    note: "You can find the full source code in the following Git repository."
 ---
