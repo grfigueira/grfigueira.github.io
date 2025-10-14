@@ -5,7 +5,7 @@
   <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
     <div class="space-y-3 md:flex-1">
       <h1 class="text-4xl font-semibold leading-tight">{{ data.title }}</h1>
-      {% if data.summary %}<p class="text-lg text-mutedLight dark:text-mutedDark">{{ data.summary }}</p>{% endif %}
+      {% if data.summary %}<p class="text-lg text-mutedLight dark:text-mutedDark">{{ data.summary | safe}}</p>{% endif %}
 
       {% if data.chips %}
       <div class="flex flex-wrap gap-3 text-sm pt-2">

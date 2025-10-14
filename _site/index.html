@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <title>Guilherme Figueira — Portfolio</title>
 
   <!-- Tailwind CDN + your exact config -->
@@ -121,6 +122,16 @@
            focus:outline-none focus:ring-2 focus:ring-rose-500/40" aria-label="itch.io" title="itch.io">
             <img src="assets/icons/itchdotio.svg" alt="" class="w-5 h-5 dark:invert" />
           </a>
+
+          <!-- youtube -->
+          <a href="https://www.youtube.com/@guilhermefigueira" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full
+           border border-lineLight dark:border-lineDark
+           bg-white dark:bg-panelDark/80 text-rose-600 dark:text-rose-400
+           shadow-sm hover:-translate-y-0.5 transition cursor-pointer
+           focus:outline-none focus:ring-2 focus:ring-rose-500/40" aria-label="itch.io" title="itch.io">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt=""
+              class="w-5 h-5 dark:invert" />
+          </a>
         </div>
 
       </div>
@@ -131,14 +142,74 @@
   <section id="projects" class="mt-6">
     <h2 class="text-lg font-medium mb-3">Game Projects</h2>
 
-    <!-- Row 1: three larger cards -->
+    <!-- Single 3x2 grid, all cards same size -->
     <div class="grid gap-6 md:grid-cols-3">
-      <!-- The Naturals' Descent -->
+
+      <!-- Row 1: The Shape Of Silence -->
+      <figure
+        class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+        <div class="relative w-full pt-[56.25%] overflow-hidden">
+          <img src="assets/images/ShapeOfSilenceLogo.png" alt="The Shape Of Silence cover"
+            class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <figcaption
+          class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
+          <h3 class="text-sm m-0">The Shape Of Silence (WIP)</h3>
+          <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Narrative puzzle game.</p>
+        </figcaption>
+      </figure>
+
+      <!-- Row 1: EasyDialogueEditor -->
+      <a href="projects/easy-dialogue-editor.html"
+        class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
+        title="Open EasyDialogueEditor project page">
+        <figure
+          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+          <div class="relative w-full pt-[56.25%] overflow-hidden">
+            <img src="assets/images/EasyDialogueEditor.png" alt="EasyDialogueEditor cover"
+              class="absolute inset-0 w-full h-full object-cover" />
+            <video muted playsinline loop preload="metadata" poster="assets/images/EasyDialogueEditor.png"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
+              src="assets/videos/EasyDialogueEditor.mp4"></video>
+          </div>
+          <figcaption
+            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
+            <h3 class="text-sm m-0">EasyDialogueEditor (2025)</h3>
+            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">A FOSS, lightweight and platform agnostic
+              dialogue tree editor for games.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- Row 1: Dynamic Substitutional Reality System -->
+      <a href="projects/dynamicsr.html"
+        class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
+        title="Open Dynamic Substitutional Reality System project page">
+        <figure
+          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+          <div class="relative w-full pt-[56.25%] overflow-hidden">
+            <img src="assets/images/Thesis/SideBySide2.jpg" alt="Dynamic Substitutional Reality System cover"
+              class="absolute inset-0 w-full h-full object-cover" />
+            <video muted playsinline loop preload="metadata" poster="assets/images/Thesis/SideBySide2.jpg"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
+              src="assets/videos/DynamicSR-TeaserVideo.mp4"></video>
+          </div>
+          <figcaption
+            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
+            <h3 class="text-sm m-0"><i>History of Writing</i>: A Dynamic Substitutional Reality System Case Study
+              (2025)</h3>
+            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">The case study for my master thesis, the
+              implementation of a dynamic SR system for abstract XR design.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- Row 2: The Naturals' Descent -->
       <a href="projects/the-naturals-descent.html"
         class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
         title="Open The Naturals' Descent project page">
         <figure
-          class="card relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+          class="card relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
           <div class="relative w-full pt-[56.25%] overflow-hidden">
             <img src="assets/images/TND_new_cover.jpg" alt="The Naturals' Descent cover"
               class="absolute inset-0 w-full h-full object-cover" />
@@ -154,12 +225,12 @@
         </figure>
       </a>
 
-      <!-- Forlorn -->
+      <!-- Row 2: Forlorn -->
       <a href="projects/forlorn.html"
         class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
         title="Open Forlorn project page">
         <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
           <div class="relative w-full pt-[56.25%] overflow-hidden">
             <img src="assets/images/forlorn.png" alt="Forlorn cover"
               class="absolute inset-0 w-full h-full object-cover" />
@@ -175,62 +246,30 @@
         </figure>
       </a>
 
-      <!-- Cartoon Campout -->
+      <!-- Row 2: Cartoon Campout -->
       <a href="projects/cartooncampout.html"
         class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
         title="Open Cartoon Campout project page">
-      <figure
-        class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-        <div class="relative w-full pt-[56.25%] overflow-hidden">
-          <img src="assets/images/CartoonCampoutLogo.png" alt="Cartoon Campout cover"
-            class="absolute inset-0 w-full h-full object-cover object-[50%_25%]" />
-          <video muted playsinline loop preload="metadata" poster="assets/images/CartoonCampoutLogo.png"
-            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-            src="assets/videos/CartoonCampoutVid.mp4"></video>
-        </div>
-        <figcaption
-          class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-          <h3 class="text-sm m-0">Cartoon Campout (2024)</h3>
-          <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Short Mixed Reality portal experiment.</p>
-        </figcaption>
-      </figure>
+        <figure
+          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+          <div class="relative w-full pt-[56.25%] overflow-hidden">
+            <img src="assets/images/CartoonCampoutLogo.png" alt="Cartoon Campout cover"
+              class="absolute inset-0 w-full h-full object-cover object-[50%_25%]" />
+            <video muted playsinline loop preload="metadata" poster="assets/images/CartoonCampoutLogo.png"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
+              src="assets/videos/CartoonCampoutVid.mp4"></video>
+          </div>
+          <figcaption
+            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
+            <h3 class="text-sm m-0">Cartoon Campout (2024)</h3>
+            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Short Mixed Reality portal experiment.</p>
+          </figcaption>
+        </figure>
       </a>
-    </div>
 
-    <!-- two smaller centered cards -->
-    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
-      <figure
-        class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card max-w-[26rem] w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-        <div class="relative w-full pt-[56.25%] overflow-hidden">
-          <img src="assets/images/ShapeOfSilenceLogo.png" alt="The 7th Floor placeholder"
-            class="absolute inset-0 w-full h-full object-cover" />
-        </div>
-        <figcaption
-          class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-          <h3 class="text-sm m-0">The Shape Of Silence (WIP)</h3>
-          <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Narrative puzzle game.</p>
-        </figcaption>
-      </figure>
-
-      <!-- EasyDialogueEditor -->
-      <figure
-        class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card max-w-[26rem] w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-        <div class="relative w-full pt-[56.25%] overflow-hidden">
-          <img src="assets/images/EasyDialogueEditor.png" alt="EasyDialogueEditor placeholder"
-            class="absolute inset-0 w-full h-full object-cover" />
-          <video muted playsinline loop preload="metadata" poster="assets/images/EasyDialogueEditor.png"
-            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-            src="assets/videos/EasyDialogueEditor.mp4"></video>
-        </div>
-        <figcaption
-          class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-          <h3 class="text-sm m-0">EasyDialogueEditor (2025)</h3>
-          <p class="text-xs text-mutedLight dark:text-mutedDark m-0">A FOSS, lightweight and platform agnostic
-            dialogue tree editor for games.</p>
-        </figcaption>
-      </figure>
     </div>
   </section>
+
 
   <!-- About -->
   <section id="about" class="mt-12">
@@ -269,6 +308,70 @@
     </p>
   </section>
 
+  <!-- Education -->
+  <section id="education" class="mt-10">
+    <h2 class="text-lg font-medium mb-3">Education</h2>
+
+    <a href="https://www.fct.unl.pt/en" target="_blank" rel="noopener" class="group block no-underline hover:no-underline focus:no-underline
+            focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
+      title="Open Nova School of Science and Technology">
+      <div class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark
+             bg-white/70 dark:bg-panelDark shadow-card p-4 cursor-pointer
+             transition-colors duration-150 transform transition-transform duration-200 ease-out
+             hover:scale-[1.01]">
+        <h3 class="text-xl font-semibold">
+          Nova School of Science and Technology (2020–2025)
+        </h3>
+        <p class="mt-2 text-sm text-mutedLight dark:text-mutedDark">
+          B.Sc. + M.Sc. in Computer Science and Engineering
+        </p>
+      </div>
+    </a>
+  </section>
+
+
+
+  <!-- Skills -->
+  <section id="skills" class="mt-10">
+    <h2 class="text-lg font-medium mb-3">Skills</h2>
+
+    <div class="rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card p-4">
+      <dl class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <dt class="font-medium">Programming Languages</dt>
+          <dd class="text-base text-mutedLight dark:text-mutedDark">
+            C++, C#, Java, Python, OCaml, HLSL
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Engines &amp; Frameworks</dt>
+          <dd class="text-base text-mutedLight dark:text-mutedDark">
+            Unreal Engine 5, Unity, FMOD, ImGui, SDL2
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Graphics &amp; Tools</dt>
+          <dd class="text-base text-mutedLight dark:text-mutedDark">
+            OpenGL, WebGL, Git, Shell, VIM, Docker
+          </dd>
+        </div>
+        <div>
+          <dt class="font-medium">Creative Software</dt>
+          <dd class="text-base text-mutedLight dark:text-mutedDark">
+            Blender (Basics), Photoshop, DaVinci Resolve
+          </dd>
+        </div>
+        <div class="sm:col-span-2">
+          <dt class="font-medium">Languages</dt>
+          <dd class="text-base text-mutedLight dark:text-mutedDark">
+            Portuguese (native), English (proficient)
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+
   <!-- Contact -->
   <section id="contact" class="mt-10 mb-28">
     <h2 class="text-lg font-medium mb-2">Contact</h2>
@@ -279,18 +382,19 @@
 </main>
 
 
-
+<!--
 <img src="assets/cat_light.png" alt="cat light"
   class="pointer-events-none select-none fixed bottom-8 right-10 w-48 -rotate-6 block dark:hidden" />
 <img src="assets/cat_dark.png" alt="cat dark"
   class="pointer-events-none select-none fixed bottom-8 right-10 w-48 -rotate-6 hidden dark:block" />
 
+-->
   </main>
 
   
 
   <footer class="border-t border-lineLight dark:border-lineDark text-center text-xs text-mutedLight dark:text-mutedDark py-4">
-    Portfolio Last Updated: 2025/10/09
+    Portfolio Last Updated: 2025/10
   </footer>
 
   <script src="/script.js" defer></script>

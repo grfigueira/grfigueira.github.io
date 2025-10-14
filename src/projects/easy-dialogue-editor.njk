@@ -1,0 +1,43 @@
+---
+layout: layouts/project.njk
+permalink: "projects/easy-dialogue-editor.html"
+
+intro:
+  title: "Easy Dialogue Editor"
+  summary: "EasyDialogueEditor is a lightweight dialogue tree editor for games. I started this project to help me design and write dialogue for my UE5 game and to sharpen my C++ skills."
+  chips:
+    - "Team size: 1"
+    - "Time Frame: 3 weeks"
+    - "Tools: C++, ImGui, SDL2"
+  header_gif: "/assets/gifs/EasyDialogueEditor.gif"
+  header_scale: 1 
+  header_alt: "Usage overview"
+
+sections:
+  - type: "text"
+    heading: "Introduction"
+    text: |
+      After creating a dialogue system for my WIP Unreal Engine 5 game, I stuggled to manually create non-linear dialogue graphs. There are other tools online but they are often overly complicated and slow. I also didn't want to use any UE5 plugin, because I wanted to have full control over the dialogue system implementation. And since I wanted to further sharpen my C++ skills, I decided to create my own solution.
+
+      A native desktop application that compiles into a single portable executable (~2.7MB) with no external dependencies.
+
+  - type: "video"
+    heading: "Video Showcase"
+    text: "I uploaded a short video announcing the release of the project on Youtube. It showcases some the program's features."
+    youtube_id: "M8uM_cWPmNM"
+
+  - type: "text"
+    heading: "What I learned"
+    text: |
+      I learned how to use SDL2 and ImGui to create native desktop applications with C++. I also learned a lot on how to set up and package a C++ project with CMAKE and Vcpkg, letting other people easily build the project and contribute if they want. This is FOSS after all.
+
+      On a less technical note, I learnt how powerful it can be to create my own tools. I could have easily just used any dialogue plugin for unreal engine, but doing it this way gives me more control over the dialogue system and, with it being platform-agnostic, allows me to use it in any future project, when relevant.
+
+  - type: "source"
+    heading: "Source Code"
+    provider: "GitHub"
+    repo: "grfigueira / EasyDialogueEditor"
+    url: "https://github.com/grfigueira/EasyDialogueEditor"
+    note: "You can find the full source code in the following Git repository."
+
+---
