@@ -41,17 +41,23 @@ sections:
       - { src: "/assets/gifs/RotatingPuzzle.gif", caption: "A variant of the basic maze puzzle, where instead of controlling the red piece, the player rotates the board 90 degrees, using gravity to move the piece around." }
 
   - type: "two-up"
-    heading: "Inventory System"
-    text: "The inventory system im implemented as a subsystem that can be accessed anywhere, making it easy to script item pickups and item usage. Items can also be inspected from within the inventory, with support for rotating the 3D model of the item and interacting with it (very much inspired by how it works in Resident Evil 7 and 8)"
-    figures:
-      - { src: "/assets/gifs/Inventory.gif", caption: "Inventory with item inspection." }
-
-  - type: "two-up"
     heading: "Dialogue System"
     text: "The game features a branching dialogue system that allows the player to interact with NPC characters (although in my game, there is only really one NPC to talk to). The system supports multiple choice responses and callbacks. I use my own Easy Dialogue Editor tool to create and manage the dialogue trees. This system also supports protagonist-monologues for interacting with and inspecting in-level objects."
     figures:
       - { src: "/assets/gifs/TheShapeOfSilence-DialogueSystem.gif", caption: "Dialogue system in action, showcasing branching options and dynamic text." }
       - { src: "/assets/gifs/TheShapeOfSilence-InventoryAndBook.gif", caption: "Inventory and book reading mechanics, allowing the player to collect items and read notes." }
+
+  - type: "two-up-single"
+    heading: "Inventory System"
+    text: |
+      The inventory system is implemented as a subsystem that can be accessed anywhere, making it easy to script item pickups and item usage.
+      Items can also be inspected from within the inventory, with support for rotating the 3D model of the item and interacting with it
+      (inspired by Resident Evil 7 and 8).
+    src: "/assets/gifs/Inventory.gif"   # also accepts .png / .gif
+    alt: "Inventory clip"
+    caption: "Inventory clip."
+    media_scale: 0.9          # e.g., 0.9, 1.1
+    media_base_width: 850  # optional px width before scaling
 
   - type: "source"
     heading: "Source Code"

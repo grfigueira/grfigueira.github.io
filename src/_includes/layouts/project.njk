@@ -27,6 +27,8 @@ layout: layouts/base.njk
 {{ B.Video(s) }}
 {% elif s.type == "two-up" %}
 {{ B.TwoUp(s) }}
+{% elif s.type == "two-up-single" %}
+{{ B.TwoUpSingle(s) }}
 {% elif s.type == "text" %}
 <section class="pb-12 space-y-6 max-w-5xl">
   {% if s.heading %}<h2 class="text-xl font-medium">{{ s.heading }}</h2>{% endif %}

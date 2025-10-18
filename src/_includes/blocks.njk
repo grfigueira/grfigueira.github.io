@@ -1,11 +1,27 @@
 {# src/_includes/blocks.njk #}
 
+{# mediaFigure: PNG/JPG/GIF or always-playing MP4 #}
+{% macro mediaFigure(src, alt, poster) %}
+{% set s = (src or '') | lower %}
+{% if 'mp4' in s %}
+<video autoplay muted loop playsinline preload="auto" {% if poster %}poster="{{ poster }}" {% endif %}
+  class="absolute inset-0 w-full h-full object-cover">
+  <source src="{{ src }}" type="video/mp4">
+</video>
+{% else %}
+<img src="{{ src }}" alt="{{ alt or '' }}" class="absolute inset-0 w-full h-full object-cover" />
+{% endif %}
+{% endmacro %}
+
+
+
 {% macro Intro(data) %}
 <section class="pb-12">
   <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
     <div class="space-y-3 md:flex-1">
       <h1 class="text-4xl font-semibold leading-tight">{{ data.title }}</h1>
-      {% if data.summary %}<p class="text-lg text-mutedLight dark:text-mutedDark">{{ data.summary | safe}}</p>{% endif %}
+      {% if data.summary %}<p class="text-lg text-mutedLight dark:text-mutedDark">{{ data.summary | safe}}</p>{% endif
+      %}
 
       {% if data.chips %}
       <div class="flex flex-wrap gap-3 text-sm pt-2">
@@ -139,4 +155,38 @@
     {{ label | default('Back to projects') }}
   </a>
 </nav>
+{% endmacro %}
+
+{% macro TwoUpSingle(section) %}
+{% set scale = section.media_scale or 1 %}
+{% set baseW = section.media_base_width or 720 %}
+
+<section class="mt-8 mb-10">
+  {% if section.heading %}
+  <h3 class="text-xl font-medium mb-3">{{ section.heading }}</h3>
+  {% endif %}
+
+  {% if section.text %}
+  <div class="mt-4 text-base text-mutedLight dark:text-mutedDark " style="max-width: {{ baseW }}px;">
+    {{ section.text | safe }}
+  </div>
+  <br>
+  {% endif %}  
+
+  {% if data.text %}<p class="text-mutedLight dark:text-mutedDark max-w-5xl">{{ data.text }}</p>{% endif %}
+  
+  <div class="inline-block" style="transform: scale({{ scale }}); transform-origin: top left;">
+    <figure
+      class="card relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card"
+      style="width: {{ baseW }}px;">
+      <div class="relative w-full pt-[56.25%] overflow-hidden">
+        {{ mediaFigure(section.src, section.alt, section.poster) }}
+      </div>
+      {% if section.caption %}
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">{{ section.caption }}</figcaption>
+      {% endif %}
+    </figure>
+  </div>
+
+</section>
 {% endmacro %}

@@ -172,26 +172,6 @@ Every system is programmed in C++, with blueprints used only for light level scr
 
 
 <section class="pb-12 space-y-6 max-w-5xl">
-  <h2 class="text-xl font-medium">Inventory System</h2>
-  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The inventory system im implemented as a subsystem that can be accessed anywhere, making it easy to script item pickups and item usage. Items can also be inspected from within the inventory, with support for rotating the 3D model of the item and interacting with it (very much inspired by how it works in Resident Evil 7 and 8)</p>
-
-  <div class="grid gap-4 md:grid-cols-2">
-    
-    <figure
-      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
-      <img src="/assets/gifs/Inventory.gif" alt="" class="w-full object-cover" loading="lazy">
-      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Inventory with item inspection.
-      </figcaption>
-    </figure>
-    
-  </div>
-</section>
-
-
-
-
-
-<section class="pb-12 space-y-6 max-w-5xl">
   <h2 class="text-xl font-medium">Dialogue System</h2>
   <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The game features a branching dialogue system that allows the player to interact with NPC characters (although in my game, there is only really one NPC to talk to). The system supports multiple choice responses and callbacks. I use my own Easy Dialogue Editor tool to create and manage the dialogue trees. This system also supports protagonist-monologues for interacting with and inspecting in-level objects.</p>
 
@@ -212,6 +192,50 @@ Every system is programmed in C++, with blueprints used only for light level scr
     </figure>
     
   </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="mt-8 mb-10">
+  
+  <h3 class="text-xl font-medium mb-3">Inventory System</h3>
+  
+
+  
+  <div class="mt-4 text-base text-mutedLight dark:text-mutedDark " style="max-width: 850px;">
+    The inventory system is implemented as a subsystem that can be accessed anywhere, making it easy to script item pickups and item usage.
+Items can also be inspected from within the inventory, with support for rotating the 3D model of the item and interacting with it
+(inspired by Resident Evil 7 and 8).
+
+  </div>
+  <br>
+    
+
+  
+  
+  <div class="inline-block" style="transform: scale(0.9); transform-origin: top left;">
+    <figure
+      class="card relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card"
+      style="width: 850px;">
+      <div class="relative w-full pt-[56.25%] overflow-hidden">
+        
+
+
+<img src="/assets/gifs/Inventory.gif" alt="Inventory clip" class="absolute inset-0 w-full h-full object-cover" />
+
+
+      </div>
+      
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Inventory clip.</figcaption>
+      
+    </figure>
+  </div>
+
 </section>
 
 
