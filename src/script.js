@@ -15,9 +15,8 @@ document.querySelectorAll(".card").forEach((card) => {
 });
 
 // Theme toggle using .dark on <html> with fast transition
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const saved = localStorage.getItem("theme");
-setTheme(saved ?? (prefersDark ? "dark" : "light"));
+setTheme(saved ?? "light");
 
 document.getElementById("themeToggle")?.addEventListener("click", () => {
   const isDark = document.documentElement.classList.contains("dark");
