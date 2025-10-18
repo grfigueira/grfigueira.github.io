@@ -4,20 +4,59 @@ permalink: "projects/TheShapeOfSilence.html"
 
 intro:
   title: "The Shape Of Silence"
-  summary: ""
+  summary: "A WIP narrative puzzle game being made in Unreal Engine 5 using mostly C++ and FMOD for the audio."
   chips:
     - "Team size: 1"
     - "Time Frame: Ongoing"
     - "Tools: Unreal Engine 5, C++, FMOD"
-  header_gif: "/assets/gifs/EasyDialogueEditor.gif"
+  header_gif: "/assets/gifs/TheShapeOfSilence-ShowReel.gif"
   header_scale: 1 
-  header_alt: "Usage overview"
+  header_alt: "Gameplay overview"
 
 sections:
 
+  - type: "text"
+    heading: "Introduction"
+    text: |
+      The Shape Of Silence is a narrative puzzle game that I started developing to improve my UE5 C++ skills, and to improve my game design and writing skills. But what started as a simple project quickly evolved into a more ambitious story game. The game's story explores themes of guilt, complicity, and martyrdom. 
+
+      <br><br>
+
+      It is a first person puzzle game where the player explores an old hotel, solving grid puzzles, uncovering pieces of the story by interacting with objects, dialoguing with an NPC. There is an inventory system, a book and note reading mechanic, branching dialogues, grid puzzle mechanics, and more.
+
+      <br><br>
+
+      Every system is programmed in C++, with blueprints used only for light level scripting and other visual effects. The audio is implemented using FMOD.
+
   - type: "video"
     heading: "Video Showcase"
-    text: "I uploaded a short video announcing the release of the project on Youtube. It showcases some the program's features."
-    youtube_id: "M8uM_cWPmNM"
+    text: "A short video showcasing the current state of the game as of October 2025."
+    youtube_id: "_a6He0KKeX0"
 
+  - type: "two-up"
+    heading: "Grid Puzzles"
+    text: "The game features various grid-based puzzles that the player must solve to open doors and progress through the story. I am using OOP principles to create an extendable puzzle that makes it easy to add new puzzle types So far there are two types of puzzles, basic mazes and rotating mazes:"
+    figures:
+      - { src: "/assets/gifs/BasePuzzle.gif", caption: "Basic maze puzzle, controlled with WASD, with the goal of moving the red piece to the red cell." }
+      - { src: "/assets/gifs/RotatingPuzzle.gif", caption: "A variant of the basic maze puzzle, where instead of controlling the red piece, the player rotates the board 90 degrees, using gravity to move the piece around." }
+
+  - type: "two-up"
+    heading: "Inventory System"
+    text: "The inventory system im implemented as a subsystem that can be accessed anywhere, making it easy to script item pickups and item usage. Items can also be inspected from within the inventory, with support for rotating the 3D model of the item and interacting with it (very much inspired by how it works in Resident Evil 7 and 8)"
+    figures:
+      - { src: "/assets/gifs/Inventory.gif", caption: "Inventory with item inspection." }
+
+  - type: "two-up"
+    heading: "Dialogue System"
+    text: "The game features a branching dialogue system that allows the player to interact with NPC characters (although in my game, there is only really one NPC to talk to). The system supports multiple choice responses and callbacks. I use my own Easy Dialogue Editor tool to create and manage the dialogue trees. This system also supports protagonist-monologues for interacting with and inspecting in-level objects."
+    figures:
+      - { src: "/assets/gifs/TheShapeOfSilence-DialogueSystem.gif", caption: "Dialogue system in action, showcasing branching options and dynamic text." }
+      - { src: "/assets/gifs/TheShapeOfSilence-InventoryAndBook.gif", caption: "Inventory and book reading mechanics, allowing the player to collect items and read notes." }
+
+  - type: "source"
+    heading: "Source Code"
+    provider: "GitHub"
+    repo: "grfigueira / ShapeOfSilence-UE5-Source"
+    url: "https://github.com/grfigueira/ShapeOfSilence-UE5-Source"
+    note: "For this project, I am using Diversion as my version control system. However, you can find the full C++ source code in the following mirror Git repository."
 ---

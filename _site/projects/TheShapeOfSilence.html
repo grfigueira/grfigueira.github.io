@@ -68,7 +68,7 @@
   <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
     <div class="space-y-3 md:flex-1">
       <h1 class="text-4xl font-semibold leading-tight">The Shape Of Silence</h1>
-      
+      <p class="text-lg text-mutedLight dark:text-mutedDark">A WIP narrative puzzle game being made in Unreal Engine 5 using mostly C++ and FMOD for the audio.</p>
 
       
       <div class="flex flex-wrap gap-3 text-sm pt-2">
@@ -96,7 +96,7 @@
       class="md:flex-shrink-0 w-full md:w-auto aspect-video overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card"
       style="--header-w: 420px;">
       <div class="h-full w-full md:[width:var(--header-w)]">
-        <img src="/assets/gifs/EasyDialogueEditor.gif" alt="Usage overview" class="w-full h-full object-cover"
+        <img src="/assets/gifs/TheShapeOfSilence-ShowReel.gif" alt="Gameplay overview" class="w-full h-full object-cover"
           loading="lazy">
       </div>
     </div>
@@ -109,20 +109,146 @@
 
 
 
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Introduction</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The Shape Of Silence is a narrative puzzle game that I started developing to improve my UE5 C++ skills, and to improve my game design and writing skills. But what started as a simple project quickly evolved into a more ambitious story game. The game's story explores themes of guilt, complicity, and martyrdom. 
+
+<br><br>
+
+It is a first person puzzle game where the player explores an old hotel, solving grid puzzles, uncovering pieces of the story by interacting with objects, dialoguing with an NPC. There is an inventory system, a book and note reading mechanic, branching dialogues, grid puzzle mechanics, and more.
+
+<br><br>
+
+Every system is programmed in C++, with blueprints used only for light level scripting and other visual effects. The audio is implemented using FMOD.
+</p>
+</section>
+
+
+
 
 
 <section class="pb-12 space-y-6 max-w-3xl">
   <h2 class="text-xl font-medium">Video Showcase</h2>
-  <p class="text-mutedLight dark:text-mutedDark">I uploaded a short video announcing the release of the project on Youtube. It showcases some the program&#39;s features.</p>
+  <p class="text-mutedLight dark:text-mutedDark">A short video showcasing the current state of the game as of October 2025.</p>
   <div
     class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card bg-black aspect-video">
-    <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/M8uM_cWPmNM?rel=0"
+    <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/_a6He0KKeX0?rel=0"
       title="Video" loading="lazy"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
   </div>
 </section>
 
+
+
+
+
+
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Grid Puzzles</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The game features various grid-based puzzles that the player must solve to open doors and progress through the story. I am using OOP principles to create an extendable puzzle that makes it easy to add new puzzle types So far there are two types of puzzles, basic mazes and rotating mazes:</p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    
+    <figure
+      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+      <img src="/assets/gifs/BasePuzzle.gif" alt="" class="w-full object-cover" loading="lazy">
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Basic maze puzzle, controlled with WASD, with the goal of moving the red piece to the red cell.
+      </figcaption>
+    </figure>
+    
+    <figure
+      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+      <img src="/assets/gifs/RotatingPuzzle.gif" alt="" class="w-full object-cover" loading="lazy">
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">A variant of the basic maze puzzle, where instead of controlling the red piece, the player rotates the board 90 degrees, using gravity to move the piece around.
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+
+
+
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Inventory System</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The inventory system im implemented as a subsystem that can be accessed anywhere, making it easy to script item pickups and item usage. Items can also be inspected from within the inventory, with support for rotating the 3D model of the item and interacting with it (very much inspired by how it works in Resident Evil 7 and 8)</p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    
+    <figure
+      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+      <img src="/assets/gifs/Inventory.gif" alt="" class="w-full object-cover" loading="lazy">
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Inventory with item inspection.
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+
+
+
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Dialogue System</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The game features a branching dialogue system that allows the player to interact with NPC characters (although in my game, there is only really one NPC to talk to). The system supports multiple choice responses and callbacks. I use my own Easy Dialogue Editor tool to create and manage the dialogue trees. This system also supports protagonist-monologues for interacting with and inspecting in-level objects.</p>
+
+  <div class="grid gap-4 md:grid-cols-2">
+    
+    <figure
+      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+      <img src="/assets/gifs/TheShapeOfSilence-DialogueSystem.gif" alt="" class="w-full object-cover" loading="lazy">
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Dialogue system in action, showcasing branching options and dynamic text.
+      </figcaption>
+    </figure>
+    
+    <figure
+      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+      <img src="/assets/gifs/TheShapeOfSilence-InventoryAndBook.gif" alt="" class="w-full object-cover" loading="lazy">
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">Inventory and book reading mechanics, allowing the player to collect items and read notes.
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+
+
+
+<section class="pb-16 grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+  <aside class="space-y-4">
+    <h2 class="text-xl font-medium">Source Code</h2>
+    <div
+      class="overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/80 dark:bg-panelDark shadow-card p-5 space-y-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-lineLight dark:border-lineDark bg-white dark:bg-panelDark">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true">
+            <path
+              d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.8-.25.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.33-1.3-1.68-1.3-1.68-1.06-.74.08-.72.08-.72 1.17.08 1.79 1.21 1.79 1.21 1.04 1.78 2.74 1.26 3.4.96.11-.76.41-1.26.75-1.55-2.6-.3-5.34-1.3-5.34-5.82 0-1.29.46-2.34 1.21-3.17-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.21a11.1 11.1 0 0 1 5.82 0c2.22-1.52 3.2-1.21 3.2-1.21.63 1.65.23 2.87.12 3.17.75.83 1.21 1.88 1.21 3.17 0 4.53-2.74 5.52-5.36 5.82.42.36.8 1.07.8 2.17v3.22c0 .32.21.69.81.57A11.5 11.5 0 0 0 12 .5z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm uppercase tracking-wide text-mutedLight dark:text-mutedDark">GitHub
+          </p>
+          <p class="text-base font-semibold">grfigueira / ShapeOfSilence-UE5-Source</p>
+        </div>
+      </div>
+
+      
+      <p class="text-sm text-mutedLight dark:text-mutedDark">For this project, I am using Diversion as my version control system. However, you can find the full C++ source code in the following mirror Git repository.</p>
+      
+
+      <a href="https://github.com/grfigueira/ShapeOfSilence-UE5-Source" target="_blank" rel="noopener"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-semibold border border-lineLight dark:border-lineDark bg-white dark:bg-panelDark transition hover:-translate-y-0.5">
+        Visit repository <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </aside>
+</section>
 
 
 
