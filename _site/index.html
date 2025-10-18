@@ -42,6 +42,7 @@
 <!-- paste your current INDEX header exactly -->
 <header
   class="sticky top-0 z-10 backdrop-blur bg-bgLight/90 dark:bg-bgDark/90 border-b border-lineLight dark:border-lineDark transition-colors duration-150">
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   <div class="mx-auto max-w-6xl px-6 py-3 grid grid-cols-[auto_1fr_auto] items-center gap-4">
     <a href="#" class="font-medium cursor-pointer">Guilherme Figueira</a>
     <nav class="justify-self-center hidden sm:flex text-sm text-mutedLight dark:text-mutedDark">
@@ -69,8 +70,8 @@
 <!-- paste ALL the content from <main>…</main> of index.html, unchanged -->
 <main class="mx-auto max-w-6xl px-6">
   <!-- Intro -->
-  <section id="intro" class="my-6">
-    <div class="grid grid-cols-[auto_1fr] gap-6 items-center">
+  <section id="intro" class="my-6 py-4">
+    <div class="grid grid-cols-[auto_1fr] gap-8 items-center">
       <figure>
         <img src="assets/portrait.png" alt="Guilherme Figueira portrait" width="160" height="160" loading="lazy"
           class="w-40 h-30 object-cover object-[50%_20%] rounded-xl2 border border-lineLight dark:border-lineDark shadow-card transition-colors duration-150" />
@@ -78,11 +79,20 @@
 
       <div>
         <h1 class="text-3xl font-semibold leading-tight">Guilherme Figueira</h1>
+
         <p class="mt-1 text-mutedLight dark:text-mutedDark">
-          M.Sc. in <b>Computer Science and Engineering</b> graduate
+          M.Sc. in <b>Computer Science and Engineering</b> graduate.
         </p>
+
+        <!-- New short about -->
+        <p class="mt-2 max-w-xl text-[15px] md:text-base leading-relaxed text-mutedLight dark:text-mutedDark">
+          C++/C# game programmer with solid software engineering practice and a theoretical background on game engine
+          architecture.
+          I turn design and artistic ideas into reliable, maintainable software.
+        </p>
+
         <!-- Action buttons -->
-        <div class="mt-3 flex items-center gap-3">
+        <div class="mt-4 flex items-center gap-3">
           <!-- Resume -->
           <a href="assets/documents/cv-guilhermefigueira.pdf" target="_blank" class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-semibold
            bg-emerald-600 text-white hover:bg-emerald-700 active:bg-emerald-800
@@ -90,7 +100,7 @@
            shadow-sm transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-400/60"
             title="Open résumé (PDF)">
             <img src="assets/icons/document.svg" alt="" class="w-5 h-5 opacity-95" />
-            Resume
+            CV
           </a>
 
           <!-- LinkedIn -->
@@ -152,7 +162,7 @@
       <!-- Row 1: The Shape Of Silence -->
       <a href="projects/TheShapeOfSilence.html"
         class="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open EasyDialogueEditor project page">
+        title="Open The Shape Of Silence project page">
         <figure
           class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
           <div class="relative w-full pt-[56.25%] overflow-hidden">
@@ -162,10 +172,55 @@
               class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
               src="assets/videos/TheShapeOfSilence-ShowReel.mp4"></video>
           </div>
+
           <figcaption
             class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
             <h3 class="text-sm m-0">The Shape Of Silence (WIP)</h3>
             <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Narrative puzzle game.</p>
+
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
+              <!-- With icon -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="logos:unrealengine-icon" width="14" height="14" class="block"></iconify-icon>
+                  UE5
+                </span>
+              </li>
+
+              <!-- No icon -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C++
+                </span>
+              </li>
+
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  FMOD
+                </span>
+              </li>
+
+              <!-- Project type (no icon) -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:account" width="14" height="14"></iconify-icon>
+
+                  Personal Project
+                </span>
+              </li>
+            </ul>
+
+
+            <!-- /TAGS -->
           </figcaption>
         </figure>
       </a>
@@ -188,6 +243,40 @@
             <h3 class="text-sm m-0">EasyDialogueEditor (2025)</h3>
             <p class="text-xs text-mutedLight dark:text-mutedDark m-0">A FOSS, lightweight and platform agnostic
               dialogue tree editor for games.</p>
+
+
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
+              <!-- with icon -->
+
+              <!-- no icon -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C++
+                </span>
+              </li>
+
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  ImGui
+                </span>
+              </li>
+
+              <!-- project type (no icon) -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:account" width="14" height="14"></iconify-icon>
+                  Personal project
+                </span>
+              </li>
+            </ul>
+            <!-- /TAGS -->
           </figcaption>
         </figure>
       </a>
@@ -211,6 +300,48 @@
               (2025)</h3>
             <p class="text-xs text-mutedLight dark:text-mutedDark m-0">The case study for my master thesis, the
               implementation of a dynamic SR system for abstract XR design.</p>
+
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
+              <!-- with icon -->
+
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="bi:headset-vr" width="14" height="14"></iconify-icon>
+                  XR
+                </span>
+
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="logos:unity" width="14" height="14" class="block"></iconify-icon>
+                  Unity
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C#
+                </span>
+              </li>
+
+              <!-- project type (no icon) -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                  Master Thesis
+                </span>
+              </li>
+            </ul>
+            <!-- /TAGS -->
+
           </figcaption>
         </figure>
       </a>
@@ -232,6 +363,35 @@
             class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
             <h3 class="text-sm m-0">The Naturals' Descent (2024)</h3>
             <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Action-Adventure puzzle game.</p>
+
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="logos:unity" width="14" height="14" class="block"></iconify-icon>
+                  Unity
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C#
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                  University Project
+                </span>
+              </li>
+            </ul>
+            <!-- /TAGS -->
+
           </figcaption>
         </figure>
       </a>
@@ -253,6 +413,33 @@
             class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
             <h3 class="text-sm m-0">Forlorn (2024)</h3>
             <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Fast FPS with platforming. Inspired by Doom.</p>
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="logos:unity" width="14" height="14" class="block"></iconify-icon>
+                  Unity
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C#
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                  University Project
+                </span>
+              </li>
+            </ul>
+            <!-- /TAGS -->
           </figcaption>
         </figure>
       </a>
@@ -274,6 +461,94 @@
             class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
             <h3 class="text-sm m-0">Cartoon Campout (2024)</h3>
             <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Short Mixed Reality portal experiment.</p>
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
+              <!-- with icon -->
+
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="bi:headset-vr" width="14" height="14"></iconify-icon>
+                  XR
+                </span>
+
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="logos:unity" width="14" height="14" class="block"></iconify-icon>
+                  Unity
+                </span>
+              </li>
+
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C#
+                </span>
+              </li>
+              <!-- project type (no icon) -->
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                 rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
+                 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                  University Related
+                </span>
+              </li>
+            </ul>
+            <!-- /TAGS -->
+          </figcaption>
+        </figure>
+      </a>
+
+      <a href="projects/opengl-3d-renderer.html"
+        class="md:col-start-2 group block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
+        title="Open OpenGL 3D Renderer project page">
+        <figure
+          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
+          <div class="relative w-full pt-[56.25%] overflow-hidden">
+            <img src="assets/images/OpenGLRenderer.png" alt="OpenGL 3D Renderer cover"
+              class="absolute inset-0 w-full h-full object-cover" />
+            <video muted playsinline loop preload="metadata" poster="assets/images/OpenGLRenderer.png"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
+              src="assets/videos/OpenGL.mp4"></video>
+          </div>
+          <figcaption
+            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
+            <h3 class="text-sm m-0">OpenGL 3D Renderer (WIP)</h3>
+            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">A simple 3D renderer built from scratch with
+              OpenGL and C++.</p>
+
+            <!-- TAGS -->
+            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                           rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                           dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  C++
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                           rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                           dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  OpenGL
+                </span>
+              </li>
+              <li>
+                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
+                           rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
+                           dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
+                  <iconify-icon icon="mdi:account" width="14" height="14" class="block"></iconify-icon>
+                  Personal Project
+                </span>
+              </li>
+            </ul>
+            <!-- /TAGS -->
           </figcaption>
         </figure>
       </a>
