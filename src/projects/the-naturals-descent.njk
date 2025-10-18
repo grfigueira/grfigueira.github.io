@@ -1,0 +1,70 @@
+---
+layout: layouts/project.njk
+permalink: "projects/the-naturals-descent.html"
+
+intro:
+  title: "The Naturals' Descent"
+  summary: "The Naturals' Descent was developed as a group project assignment for the Games and Simulations course at Nova University. The group was composed of 2 programmers, and we also had some help with the world building and story telling from another friend."
+  chips:
+    - "Team size: 2"
+    - "Time Frame: 10 weeks"
+    - "Engine: Unity (C#)"
+  actions:
+    - label: "View GDD (PDF)"
+      href: "/assets/documents/GDD-TheNaturalsDescent.pdf"
+      primary: true
+      icon: "/assets/icons/document.svg"         # file icon
+      icon_class: "w-5 h-5 opacity-95"
+
+    - label: "Play on itch.io"
+      href: "https://gfigueira.itch.io/the-naturals-descent"
+      primary: false
+      icon: "/assets/icons/itchdotio.svg"        # file icon
+      icon_class: "w-5 h-5 dark:invert"
+  header_gif: "/assets/gifs/TND.gif"
+  header_alt: "Gameplay loop overview"
+
+sections:
+  - type: "text"
+    heading: "Introduction"
+    text: |
+      This was the bigger final project for the Games and Simulations university course. We were given full creative freedom and so we decided to try and create a relatively ambitious action-adventure first person shooter, set in a steampunk desert world. The player can explore the desert in a hover board, fight AI enemies and solve puzzles inside of procedurally generated underground mazes.
+
+      The following sections showcase some of my core contributions to the project.
+
+  - type: "video"
+    heading: "Video Presentation"
+    text: "Video showcasing the game and the implementation of the core mechanics. It was required for the project submission."
+    youtube_id: "isLo5lBK4to"
+
+  - type: "two-up"
+    heading: "Wave Function Collapse"
+    text: "For the underground caverns, we knew we wanted them to be procedurally generated. I challenged myself to implement this procedural generation using the Wave Function Collapse algorithm. Because of the project's ever-closing deadline and since we didn't really need verticality in the caverns, I applied the 2D version of the algorithm using 3D meshes as the possible tiles."
+    figures:
+      - { src: "/assets/gifs/WFCTiles.gif", caption: "The 3D meshes used as tiles and assignment of side tags." }
+      - { src: "/assets/gifs/WFCVIZU.gif", caption: "Visualization of the Wave Function Collapse algorithm in action." }
+
+  - type: "two-up"
+    heading: "Hover Board Mechanic"
+    text: "For exploring the desert, we wanted the player to be able to ride some kind of vehicle. We decided that a hover board would be a cool and fitting choice for our steampunk world. The mechanic was inspired by the hover bike found in the game Sable."
+    figures:
+      - { src: "/assets/gifs/TNDBoardInAction.gif", caption: "Visual demonstration of the hover board physics." }
+      - { src: "/assets/gifs/TNDHoverBoard.gif", caption: "Hover board in action, exploring the desert." }
+
+  - type: "text"
+    heading: "What I learned"
+    text: |
+      This project taught me a lot about collaborating during game development. Even though our team was small, just two programmers, I really enjoyed the exchange of ideas and the process of brainstorming solutions together. <br><br>
+
+      It was also the first time I worked in devising a detailed Game Design Document (GDD) before starting development. I learned how helpful it is to have a clear vision from the start to keep the scope realistic and maintain focus during implementation. <br><br>
+
+      Another challenge was resolving Git merge conflicts in a game development context. While I was already familiar with resolving git merge conflicts, working with many binary and structured files made conflict resolution trickier. I learned how to handle these safely and prevent project corruption.
+      
+
+  - type: "source"
+    heading: "Source Code"
+    provider: "GitHub"
+    repo: "GamesAndSimulation / ga2024-G2-11"
+    url: "https://github.com/GamesAndSimulation/ga2024-G2-11"
+    note: "You can find the full source code in the following Git repository."
+---

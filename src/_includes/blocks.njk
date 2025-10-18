@@ -1,0 +1,192 @@
+{# src/_includes/blocks.njk #}
+
+{# mediaFigure: PNG/JPG/GIF or always-playing MP4 #}
+{% macro mediaFigure(src, alt, poster) %}
+{% set s = (src or '') | lower %}
+{% if 'mp4' in s %}
+<video autoplay muted loop playsinline preload="auto" {% if poster %}poster="{{ poster }}" {% endif %}
+  class="absolute inset-0 w-full h-full object-cover">
+  <source src="{{ src }}" type="video/mp4">
+</video>
+{% else %}
+<img src="{{ src }}" alt="{{ alt or '' }}" class="absolute inset-0 w-full h-full object-cover" />
+{% endif %}
+{% endmacro %}
+
+
+
+{% macro Intro(data) %}
+<section class="pb-12">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
+    <div class="space-y-3 md:flex-1">
+      <h1 class="text-4xl font-semibold leading-tight">{{ data.title }}</h1>
+      {% if data.summary %}<p class="text-lg text-mutedLight dark:text-mutedDark">{{ data.summary | safe}}</p>{% endif
+      %}
+
+      {% if data.chips %}
+      <div class="flex flex-wrap gap-3 text-sm pt-2">
+        {% for c in data.chips %}
+        <span
+          class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">{{
+          c }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if data.actions %}
+      <div class="flex flex-wrap items-center gap-3">
+        {% for a in data.actions %}
+        <a href="{{ a.href }}" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 rounded-full
+       {% if a.primary %} bg-emerald-600 text-white px-4 py-2 {% else %} border border-lineLight dark:border-lineDark bg-white/80 dark:bg-panelDark px-4 py-2 {% endif %}">
+
+          {# optional icon by file path #}
+          {% if a.icon %}
+          <img src="{{ a.icon }}" alt="" aria-hidden="true" class="{{ a.icon_class or 'w-5 h-5 opacity-95' }}">
+          {% endif %}
+
+          {# optional inline SVG (string) #}
+          {% if a.icon_svg %}
+          <span class="{{ a.icon_class or 'w-5 h-5' }}" aria-hidden="true">
+            {{ a.icon_svg | safe }}
+          </span>
+          {% endif %}
+
+          {{ a.label }}
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if data.header_gif %}
+    {% set s = data.header_scale | default(1) %}
+    {% set w = (420 * s) | round(0, 'floor') %}
+
+    <div
+      class="md:flex-shrink-0 w-full md:w-auto aspect-video overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card"
+      style="--header-w: {{ w }}px;">
+      <div class="h-full w-full md:[width:var(--header-w)]">
+        <img src="{{ data.header_gif }}" alt="{{ data.header_alt or '' }}" class="w-full h-full object-cover"
+          loading="lazy">
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+{% endmacro %}
+
+{% macro Video(data) %}
+{% if data.youtube_id %}
+<section class="pb-12 space-y-6 max-w-3xl">
+  {% if data.heading %}<h2 class="text-xl font-medium">{{ data.heading }}</h2>{% endif %}
+  {% if data.text %}<p class="text-mutedLight dark:text-mutedDark">{{ data.text }}</p>{% endif %}
+  <div
+    class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card bg-black aspect-video">
+    <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ data.youtube_id }}?rel=0"
+      title="{{ data.title or 'Video' }}" loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+</section>
+{% endif %}
+{% endmacro %}
+
+{% macro TwoUp(data) %}
+<section class="pb-12 space-y-6 max-w-5xl">
+  {% if data.heading %}<h2 class="text-xl font-medium">{{ data.heading }}</h2>{% endif %}
+  {% if data.text %}<p class="text-mutedLight dark:text-mutedDark max-w-5xl">{{ data.text }}</p>{% endif %}
+
+  <div class="grid gap-4 md:grid-cols-2">
+    {% for fig in data.figures %}
+    <figure
+      class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card">
+      <img src="{{ fig.src }}" alt="{{ fig.alt or '' }}" class="w-full object-cover" loading="lazy">
+      {% if fig.caption %}<figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">{{ fig.caption }}
+      </figcaption>{% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}
+
+{# Source code card ------------------------------------ #}
+{% macro SourceCard(data) %}
+<section class="pb-16 grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+  <aside class="space-y-4">
+    <h2 class="text-xl font-medium">{{ data.heading or "Source Code" }}</h2>
+    <div
+      class="overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/80 dark:bg-panelDark shadow-card p-5 space-y-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-lineLight dark:border-lineDark bg-white dark:bg-panelDark">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true">
+            <path
+              d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.8-.25.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.33-1.3-1.68-1.3-1.68-1.06-.74.08-.72.08-.72 1.17.08 1.79 1.21 1.79 1.21 1.04 1.78 2.74 1.26 3.4.96.11-.76.41-1.26.75-1.55-2.6-.3-5.34-1.3-5.34-5.82 0-1.29.46-2.34 1.21-3.17-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.21a11.1 11.1 0 0 1 5.82 0c2.22-1.52 3.2-1.21 3.2-1.21.63 1.65.23 2.87.12 3.17.75.83 1.21 1.88 1.21 3.17 0 4.53-2.74 5.52-5.36 5.82.42.36.8 1.07.8 2.17v3.22c0 .32.21.69.81.57A11.5 11.5 0 0 0 12 .5z" />
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm uppercase tracking-wide text-mutedLight dark:text-mutedDark">{{ data.provider or "GitHub" }}
+          </p>
+          <p class="text-base font-semibold">{{ data.repo }}</p>
+        </div>
+      </div>
+
+      {% if data.note %}
+      <p class="text-sm text-mutedLight dark:text-mutedDark">{{ data.note }}</p>
+      {% endif %}
+
+      <a href="{{ data.url }}" target="_blank" rel="noopener"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-semibold border border-lineLight dark:border-lineDark bg-white dark:bg-panelDark transition hover:-translate-y-0.5">
+        Visit repository <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </aside>
+</section>
+{% endmacro %}
+
+{# Back to projects ------------------------------------ #}
+{% macro BackLink(href, label) %}
+<nav class="py-6 text-sm text-mutedLight dark:text-mutedDark">
+  <a href="{{ href | default('/#projects') }}"
+    class="inline-flex items-center gap-2 rounded-full border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark px-4 py-1.5 transition-colors hover:text-inkLight dark:hover:text-inkDark">
+    <span aria-hidden="true">←</span>
+    {{ label | default('Back to projects') }}
+  </a>
+</nav>
+{% endmacro %}
+
+{% macro TwoUpSingle(section) %}
+{% set scale = section.media_scale or 1 %}
+{% set baseW = section.media_base_width or 720 %}
+
+<section class="mt-8 mb-10">
+  {% if section.heading %}
+  <h3 class="text-xl font-medium mb-3">{{ section.heading }}</h3>
+  {% endif %}
+
+  {% if section.text %}
+  <div class="mt-4 text-base text-mutedLight dark:text-mutedDark " style="max-width: {{ baseW }}px;">
+    {{ section.text | safe }}
+  </div>
+  <br>
+  {% endif %}  
+
+  {% if data.text %}<p class="text-mutedLight dark:text-mutedDark max-w-5xl">{{ data.text }}</p>{% endif %}
+  
+  <div class="inline-block" style="transform: scale({{ scale }}); transform-origin: top left;">
+    <figure
+      class="card relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card"
+      style="width: {{ baseW }}px;">
+      <div class="relative w-full pt-[56.25%] overflow-hidden">
+        {{ mediaFigure(section.src, section.alt, section.poster) }}
+      </div>
+      {% if section.caption %}
+      <figcaption class="p-3 text-sm text-mutedLight dark:text-mutedDark">{{ section.caption }}</figcaption>
+      {% endif %}
+    </figure>
+  </div>
+
+</section>
+{% endmacro %}

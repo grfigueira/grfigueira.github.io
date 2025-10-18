@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <title>Guilherme Figueira — Portfolio</title>
+
+  <!-- Tailwind CDN + your exact config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bgLight: '#f4f8f3',
+            panelLight: '#ededec',
+            lineLight: '#e3e3e2',
+            inkLight: '#121212',
+            mutedLight: '#6b6b6b',
+            bgDark: '#0b1215',
+            panelDark: '#0f171f',
+            lineDark: '#161616',
+            inkDark: '#e7eef5',
+            mutedDark: '#9aa5ae',
+          },
+          boxShadow: { card: '0 10px 24px rgba(0,0,0,0.10)' },
+          borderRadius: { xl2: '1.25rem' },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-bgLight text-inkLight dark:bg-bgDark dark:text-inkDark transition-colors duration-150">
+
+  
+
+  <main class="mx-auto max-w-6xl px-6">
+    
+
+
+<header
+  class="sticky top-0 z-10 backdrop-blur bg-bgLight/90 dark:bg-bgDark/90 border-b border-lineLight dark:border-lineDark transition-colors duration-150">
+  <div class="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between gap-4">
+    <a href="/#projects" class="font-medium cursor-pointer">Guilherme Figueira</a>
+    <button id="themeToggle" aria-label="Activate dark mode" aria-pressed="false"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-lineLight dark:border-lineDark bg-white/60 dark:bg-panelDark shadow-sm">
+      <img src="/assets/sun.svg" class="block dark:hidden w-5 h-5" alt="">
+      <img src="/assets/moon.svg" class="hidden dark:block w-5 h-5" alt="">
+    </button>
+  </div>
+</header>
+
+
+
+
+<nav class="py-6 text-sm text-mutedLight dark:text-mutedDark">
+  <a href="/#projects"
+    class="inline-flex items-center gap-2 rounded-full border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark px-4 py-1.5 transition-colors hover:text-inkLight dark:hover:text-inkDark">
+    <span aria-hidden="true">←</span>
+    Back to projects
+  </a>
+</nav>
+
+
+<section class="pb-12">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 max-w-5xl">
+    <div class="space-y-3 md:flex-1">
+      <h1 class="text-4xl font-semibold leading-tight">Cartoon Campout</h1>
+      <p class="text-lg text-mutedLight dark:text-mutedDark">This was an experimental project targeting the Meta Quest 3. I wanted to explore the usage of seamless portals to travel between video see-through and a virtual world.</p>
+
+      
+      <div class="flex flex-wrap gap-3 text-sm pt-2">
+        
+        <span
+          class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">Team size: 1</span>
+        
+        <span
+          class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">Time Frame: 2 weeks</span>
+        
+        <span
+          class="inline-flex items-center rounded-full bg-panelLight dark:bg-panelDark border border-lineLight dark:border-lineDark px-3 py-1">Engine: Unity (C#) and MetaXR SDK</span>
+        
+      </div>
+      
+
+      
+    </div>
+
+    
+    
+    
+
+    <div
+      class="md:flex-shrink-0 w-full md:w-auto aspect-video overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark shadow-card"
+      style="--header-w: 420px;">
+      <div class="h-full w-full md:[width:var(--header-w)]">
+        <img src="/assets/gifs/CartoonCampout.gif" alt="Gameplay loop overview" class="w-full h-full object-cover"
+          loading="lazy">
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+
+
+
+
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Introduction</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">In this very short project, the player can go through a seamless portal into a cozy virtual campsite where they can cook and eat marshmallows and watch old cartoons on the TV.
+</p>
+</section>
+
+
+
+<section class="pb-12 space-y-6 max-w-5xl">
+  <h2 class="text-xl font-medium">Technology and Context</h2>
+  <p class="text-mutedLight dark:text-mutedDark max-w-5xl">The portal is created using a custom stencil shader that either renders a passthrough material (provided by MetaXR) or the virtual world. Although the player can never see it, the portal is actually a 3 dimensional mesh with inverted normals which ensures a seamless transition without clipping. Every iteration uses hand tracking only, no controllers are needed.
+
+The player can open and close the portal by pressing a physics button, cook and eat marshmallows by the campfire, and watch an old cartoon on the TV after turning it on.
+</p>
+</section>
+
+
+
+
+  </main>
+
+  
+
+  <footer class="border-t border-lineLight dark:border-lineDark text-center text-xs text-mutedLight dark:text-mutedDark py-4">
+    Portfolio Last Updated: 2025/10
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
