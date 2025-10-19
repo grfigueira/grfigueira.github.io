@@ -2,14 +2,14 @@
 name: Guilherme Ribeiro Figueira
 header:
   - text: |
-      <span style="font-size: 1.2em; font-weight: bold;">C++/C# Generalist Game Programmer / Engineer</span>
+      <span style="font-size: 1.2em; font-weight: bold;">C++/C# Generalist Game Programmer (Junior)</span>
   - text: <span class="iconify" data-icon="tabler:brand-github"></span> github.com/grfigueira
     link: https://github.com/grfigueira
     newLine: true
   - text: <span class="iconify" data-icon="mdi:linkedin"></span> linkedin.com/in/grfigueira
     link: https://www.linkedin.com/in/grfigueira/
   - text: <span class="iconify" data-icon="streamline-plump:web"></span> My Porfolio
-    link: grfigueira.github.io
+    link: https://grfigueira.github.io
   - text: <span class="iconify" data-icon="tabler:phone"></span> (+351) 916099199
     link: tel:+351916099199
     newLine: true
@@ -20,29 +20,6 @@ header:
 <!-- Important: Replace all template content, especially contact details, with your own information. -->
 
 <!-- Important: When updating your email address, remember to change both the "text" (visible text) and the "link" (underlying hyperlink) fields. -->
-
-
-## Education
-
-**Nova School Of Science and Technology**
-  ~ Almada, PT
-
-B.Sc. + M.Sc. in Computer Science and Engineering
-  ~ 2020 - 2025
-
-- **Master Thesis**: *Dynamic Substitutional Reality In Adaptive Virtual Experiences*. Researched and developed a Unity-based framework that enables the abstract design of SR experiences, allowing them to be dynamically adapted to arbitrary physical spaces.
-- Co-authored an additional paper [~P1].
-- Part of my research and implementation is being ported into a **real-world museum application** at the *Portuguese National Tile Museum* in Lisbon, Portugal.
-- **Relevant courses**: Games and Simulations, Computer Graphics, OOP, AI, Concurrent Programming
-
-## Publications
-
-[~P1]: **Towards Augmented XR Movement and Interaction Confidence across Substitutional Reality**
-
-    <u>Guilherme R. Figueira</u>, Rui Nóbrega
-
-    *International Conference on Graphics and Interaction (ICGI), 2025*
-
 
 ## Experience
 
@@ -56,6 +33,28 @@ Glartek
 - Utilized <b>3D vector math</b>, <b>memoization techniques</b>, and <b>search algorithms</b> to optimize performance and ensure reliable processing of imported 3D model for the supported formats.
 - Created <b>unit and integration tests</b> for scripts using <b>Zenject dependency injection</b> framework, improving test coverage and code reliability.
 - Collaborated using an <b>AGILE</b> methodology with <b>GitLab</b> for version control.
+
+## Education
+
+**Nova School Of Science and Technology**
+  ~ Almada, PT
+
+B.Sc. + M.Sc. in Computer Science and Engineering
+  ~ 2020 - 2025
+
+- **Master Thesis**: *Dynamic Substitutional Reality In Adaptive Virtual Experiences*. Researched and developed a Unity-based framework that enables the abstract design of SR experiences, allowing them to be dynamically adapted to arbitrary physical spaces.
+- Co-authored an additional paper [~P1].
+- Part of my research and implementation is being ported into a **real-world museum application** at the *Portuguese National Tile Museum* in Lisbon, Portugal.
+- **Relevant courses**: Games and Simulations, Computer Graphics, OOP, AI, Concurrent Programming, Computer Architecture.
+
+## Publications
+
+[~P1]: **Towards Augmented XR Movement and Interaction Confidence across Substitutional Reality**
+
+    <u>Guilherme R. Figueira</u>, Rui Nóbrega
+
+    *International Conference on Graphics and Interaction (ICGI), 2025*
+
 <!--
 <br>
 
@@ -135,7 +134,7 @@ Personal Project
 
 Personal Project
 
-- A FOSS, lightweight and platform agnostic **desktop program for editing game dialogue trees**. Created to solve a problem in a personal UE5 project.
+- A lightweight and platform agnostic **desktop program for editing game dialogue trees**. Created to solve a problem in a personal UE5 project.
 - Written in <b>C++</b> with <b>ImGui</b>. It compiles to a <b>single small and portable executable</b> (~2.7 Mb) with no external dependancies, everything is statically linked.
 
 <br>
@@ -145,9 +144,9 @@ Personal Project
 
 University Games and Simulations Course
 
-- Action-adventure puzzle game developed in Unity3D as part of a **2-person team**. <br>
+- Action-adventure puzzle game developed in Unity as part of a **2-person team**. <br>
 - Designed and implemented a **procedurally generated cavern** using the **Wave Function Collapse** algorithm adapted to 3D, ensuring natural looking layouts with procedurally spawned enemies.
-- Programmed multiple core gameplay mechanics such as: a *extandable sigil puzzle** component, a **ridable vehicle** and **FPS combat with AI animated humanoid enemies**.
+- Programmed multiple core gameplay mechanics such as: an **extandable sigil puzzle** component, a **ridable vehicle** and **FPS combat with AI animated humanoid enemies**.
 
 
   
