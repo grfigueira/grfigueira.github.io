@@ -4,108 +4,71 @@ title: Guilherme Figueira — Portfolio
 ---
 
 {% block header %}
-<header
-  class="sticky top-0 z-10 backdrop-blur bg-bgLight/90 dark:bg-bgDark/90 border-b border-lineLight dark:border-lineDark transition-colors duration-150">
+<header class="site-header home-header">
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-  <div class="mx-auto max-w-6xl px-6 py-3 grid grid-cols-[auto_1fr_auto] items-center gap-4">
-    <a href="#" class="font-medium cursor-pointer">Guilherme Figueira</a>
-    <nav class="justify-self-center hidden sm:flex text-sm text-mutedLight dark:text-mutedDark">
-      <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150"
-        href="#projects">Game Projects</a>
-      <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150"
-        href="#about">About Me</a>
-      <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150"
-        href="#education">Education</a>
-      <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150"
-        href="#skills">Skills</a>
-      <a class="px-4 py-1 rounded hover:text-inkLight dark:hover:text-inkDark cursor-pointer transition-colors duration-150"
-        href="#contact">Contact</a>
+  <div class="site-header__inner home-header__inner">
+    <a href="#" class="brand-link">Guilherme Figueira</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-nav__link" href="#projects">Projects</a>
+      <a class="site-nav__link" href="#about">About Me</a>
+      <a class="site-nav__link" href="#education">Education</a>
+      <a class="site-nav__link" href="#skills">Skills</a>
+      <a class="site-nav__link" href="#contact">Contact</a>
     </nav>
-    <button id="themeToggle" aria-label="Activate dark mode" aria-pressed="false"
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-lineLight dark:border-lineDark bg-white/60 dark:bg-panelDark shadow-sm cursor-pointer transition-colors duration-150">
-      <img src="assets/sun.svg" alt="" class="block dark:hidden w-5 h-5" />
-      <img src="assets/moon.svg" alt="" class="hidden dark:block w-5 h-5" />
-    </button>
   </div>
 </header>
 {% endblock %}
 
 {% block content %}
-<main class="mx-auto max-w-6xl px-6">
   <!-- Intro -->
-  <section id="intro" class="my-6 py-4">
-    <div class="grid grid-cols-[auto_1fr] gap-8 items-center">
-      <figure>
+  <section id="intro" class="home-intro">
+    <div class="home-intro__layout">
+      <figure class="portrait-frame">
         <img src="assets/portrait.png" alt="Guilherme Figueira portrait" width="160" height="160" loading="lazy"
-          class="w-40 h-30 object-cover object-[50%_20%] rounded-xl2 border border-lineLight dark:border-lineDark shadow-card transition-colors duration-150" />
+          class="portrait-image" />
       </figure>
 
-      <div>
-        <h1 class="text-3xl font-semibold leading-tight">Guilherme Figueira</h1>
+      <div class="home-intro__content">
+        <h1 class="home-title">Guilherme Figueira</h1>
 
-        <p class="mt-1 text-mutedLight dark:text-mutedDark">
-          M.Sc. in <b>Computer Science and Engineering</b>
-        </p>
-
-        <!-- New short about -->
-        <p class="mt-2 max-w-xl text-[15px] md:text-base leading-relaxed text-mutedLight dark:text-mutedDark">
-          I'm a C++ software engineer currently working in the automotive industry. I am very interested in graphics programming and game development.
+        <p class="home-role">
+          Junior <b>Software Engineer</b> | M.Sc. in <b>Computer Science and Engineering</b>
         </p>
 
         <!-- Action buttons -->
-        <div class="mt-4 flex items-center gap-3">
+        <div class="home-actions">
           <!-- Resume -->
-          <a href="assets/documents/cv-guilhermefigueira.pdf" target="_blank" class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-semibold
-           bg-emerald-600 text-white hover:bg-emerald-700 active:bg-emerald-800
-           dark:bg-emerald-500 dark:hover:bg-emerald-600 dark:active:bg-emerald-700
-           shadow-sm transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-400/60"
+          <a href="assets/documents/cv-guilhermefigueira.pdf" target="_blank" rel="noopener" class="button button--primary"
             title="Open résumé (PDF)">
-            <img src="assets/icons/document.svg" alt="" class="w-5 h-5 opacity-95" />
+            <img src="assets/icons/document.svg" alt="" class="action-icon" />
             CV
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/grfigueira/" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full
-           border border-lineLight dark:border-lineDark
-           bg-white dark:bg-panelDark/80 text-[#0A66C2] dark:text-[#8ab4f8]
-           shadow-sm hover:-translate-y-0.5 transition cursor-pointer
-           focus:outline-none focus:ring-2 focus:ring-[#0A66C2]/40" aria-label="LinkedIn" title="LinkedIn">
-            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true">
+          <a href="https://www.linkedin.com/in/grfigueira/" target="_blank" rel="noopener" class="social-link social-link--linkedin" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" class="social-icon" aria-hidden="true">
               <path
                 d="M20.45 20.45h-3.554v-5.59c0-1.333-.027-3.045-1.855-3.045-1.857 0-2.141 1.45-2.141 2.95v5.685H9.34V9h3.41v1.56h.047c.474-.9 1.63-1.85 3.355-1.85 3.59 0 4.25 2.365 4.25 5.44v6.3zM5.337 7.44a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.115 20.45H3.56V9h3.555v11.45z" />
             </svg>
           </a>
 
           <!-- GitHub -->
-          <a href="https://github.com/grfigueira" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full
-           border border-lineLight dark:border-lineDark
-           bg-white dark:bg-panelDark/80 text-black dark:text-white
-           shadow-sm hover:-translate-y-0.5 transition cursor-pointer
-           focus:outline-none focus:ring-2 focus:ring-black/20 dark:focus:ring-white/30" aria-label="GitHub"
-            title="GitHub">
-            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true">
+          <a href="https://github.com/grfigueira" target="_blank" rel="noopener" class="social-link social-link--github" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" class="social-icon" aria-hidden="true">
               <path
                 d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.8-.25.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.33-1.3-1.68-1.3-1.68-1.06-.74.08-.72.08-.72 1.17.08 1.79 1.21 1.79 1.21 1.04 1.78 2.74 1.26 3.4.96.11-.76.41-1.26.75-1.55-2.6-.3-5.34-1.3-5.34-5.82 0-1.29.46-2.34 1.21-3.17-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.21a11.1 11.1 0 0 1 5.82 0c2.22-1.52 3.2-1.21 3.2-1.21.63 1.65.23 2.87.12 3.17.75.83 1.21 1.88 1.21 3.17 0 4.53-2.74 5.52-5.36 5.82.42.36.8 1.07.8 2.17v3.22c0 .32.21.69.81.57A11.5 11.5 0 0 0 12 .5z" />
             </svg>
           </a>
 
           <!-- itch.io -->
-          <a href="https://gfigueira.itch.io/" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full
-           border border-lineLight dark:border-lineDark
-           bg-white dark:bg-panelDark/80 text-rose-600 dark:text-rose-400
-           shadow-sm hover:-translate-y-0.5 transition cursor-pointer
-           focus:outline-none focus:ring-2 focus:ring-rose-500/40" aria-label="itch.io" title="itch.io">
-            <img src="assets/icons/itchdotio.svg" alt="" class="w-5 h-5 dark:invert" />
+          <a href="https://gfigueira.itch.io/" target="_blank" rel="noopener" class="social-link social-link--itch" aria-label="itch.io" title="itch.io">
+            <img src="assets/icons/itchdotio.svg" alt="" class="social-icon" />
           </a>
 
           <!-- youtube -->
-          <a href="https://www.youtube.com/@guilhermefigueira" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full
-           border border-lineLight dark:border-lineDark
-           bg-white dark:bg-panelDark/80 text-rose-600 dark:text-rose-400
-           shadow-sm hover:-translate-y-0.5 transition cursor-pointer
-           focus:outline-none focus:ring-2 focus:ring-rose-500/40" aria-label="itch.io" title="itch.io">
+          <a href="https://www.youtube.com/@guilhermefigueira" target="_blank" rel="noopener" class="social-link social-link--youtube" aria-label="YouTube" title="YouTube">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt=""
-              class="w-5 h-5 dark:invert" />
+              class="social-icon" />
           </a>
         </div>
 
@@ -113,488 +76,417 @@ title: Guilherme Figueira — Portfolio
     </div>
   </section>
 
+  <!-- About -->
+  <section id="about" class="section-block">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="body-copy">
+      I'm a <b>Junior Software Engineer</b> with an <b>M.Sc. in Computer Science and Engineering</b>, passionate about games, graphics, interactive media, and low-level programming.
+    </p>
+
+    <br>
+
+    <p class="body-copy">
+    I am currently working in the automotive industry developing safety-critical C++ real-time software for vehicle ECUs. In my free, I enjoy studying graphics programming, game software architecture and general game development.
+    </p>
+
+    <br>
+
+  </section>
   <!-- Projects -->
-  <section id="projects" class="mt-6">
-    <h2 class="text-lg font-medium mb-3">Game Projects</h2>
+  <section id="projects" class="section-block projects-section">
+    <h2 class="section-title">Projects</h2>
 
-    <div class="grid gap-6 md:grid-cols-12">
+    <p class="body-copy projects-intro-copy">
+      Every project here, unless tagged with <span class="tag"><iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>University Project</span>, was done solo in my own free time.
+    </p>
 
-      <!-- Row 1: The Shape Of Silence -->
-      <a href="projects/TheShapeOfSilence.html"
-        class="group block md:col-span-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open The Shape Of Silence project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/ShapeOfSilenceLogo.png" alt="The Shape Of Silence cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/ShapeOfSilenceLogo.png"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/TheShapeOfSilence-ShowReel.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">The Shape Of Silence (WIP)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">First person narrative puzzle game, exploring themes of guilt and complicity.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="logos:unrealengine-icon" width="14" height="14"
-                    class="block text-current dark:invert"></iconify-icon>
-                  UE5
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C++
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  FMOD
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="mdi:account" width="14" height="14"></iconify-icon>
-                  Personal Project
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
+    <div class="project-groups">
 
-      <!-- Row 1: EasyDialogueEditor -->
-      <a href="projects/easy-dialogue-editor.html"
-        class="group block md:col-span-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open EasyDialogueEditor project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/EasyDialogueEditor.png" alt="EasyDialogueEditor cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/EasyDialogueEditor.png"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/EasyDialogueEditor.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">EasyDialogueEditor (2025)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">A FOSS, lightweight and platform agnostic
-              dialogue tree editor for games.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C++
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  ImGui
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="mdi:account" width="14" height="14"></iconify-icon>
-                  Personal project
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
+      <section class="project-group" aria-labelledby="graphics-tools-heading">
+        <div class="project-group__header">
+          <h3 id="graphics-tools-heading" class="project-group__title">Graphics and Tools</h3>
+        </div>
 
-      <!-- Row 1: OpenGL 3D Renderer -->
-      <a href="projects/opengl-3d-renderer.html"
-        class="group block md:col-span-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open OpenGL 3D Renderer project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/OpenGLRenderer.png" alt="OpenGL 3D Renderer cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/OpenGLRenderer.png"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/OpenGL.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">OpenGL 3D Renderer (WIP)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">A simple 3D renderer built from scratch with
-              OpenGL and C++.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
-              <li><span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">C++</span>
-              </li>
-              <li><span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">OpenGL</span>
-              </li>
-              <li><span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"><iconify-icon
-                    icon="mdi:account" width="14" height="14" class="block"></iconify-icon>Personal Project</span></li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
+        <div class="project-grid project-grid--compact">
 
-      <!-- Row 2: The Naturals' Descent -->
-      <a href="projects/the-naturals-descent.html"
-        class="group block md:col-span-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open The Naturals' Descent project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/TND_new_cover.jpg" alt="The Naturals' Descent cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/TND_new_cover.jpg"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/TND.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">The Naturals' Descent (2024)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Action-Adventure puzzle game.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
-              <li>
-                <span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="logos:unity" width="14" height="14" class="block text-current dark:invert"></iconify-icon>
-                  Unity
-                </span>
-              </li>
-              <li>
-                <span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C#
-                </span>
-              </li>
-              <li>
-                <span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
-                  University Project
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
+          <a href="projects/opengl-3d-renderer.html"
+            class="project-card-link"
+            title="Open Papoila Engine project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/OpenGLRenderer.png" alt="Papoila Engine cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/OpenGLRenderer.png"
+                  class="project-card__video"
+                  src="assets/videos/OpenGL.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">Papoila Game Engine (WIP)</h3>
+                <p class="project-card__summary">Simple 3D game engine built from scratch with OpenGL and C++.</p>
+                <ul class="tag-list" aria-label="technologies used">
+                  <li><span class="tag">C++</span></li>
+                  <li><span class="tag">OpenGL</span></li>
+                  <li><span class="tag"><iconify-icon
+                        icon="mdi:account" width="14" height="14"></iconify-icon>Personal Project</span></li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
 
-      <!-- Row 2: History of Writing (Dynamic SR) -->
-      <a href="projects/dynamicsr.html"
-        class="group block md:col-span-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open Dynamic Substitutional Reality System project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/Thesis/SideBySide2.jpg" alt="Dynamic Substitutional Reality System cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/Thesis/SideBySide2.jpg"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/DynamicSR-TeaserVideo.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0"><i>History of Writing</i>: A Dynamic Substitutional Reality System Case Study
-              (2025)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">The case study for my master thesis. An XR museum experience.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="bi:headset-vr" width="14" height="14"></iconify-icon>
-                  XR
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="logos:unity" width="14" height="14" class="block text-current dark:invert"></iconify-icon>
-                  Unity
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C#
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
-                  Master Thesis
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
 
-      <!-- Row 2: Forlorn -->
-      <a href="projects/forlorn.html"
-        class="group block md:col-span-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open Forlorn project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/forlorn.png" alt="Forlorn cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/forlorn.png"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/forlorn.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">Forlorn (2024)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Fast paced FPS game with platforming. Inspired by Doom.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
-              <li>
-                <span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="logos:unity" width="14" height="14" class="block text-current dark:invert"></iconify-icon>
-                  Unity
-                </span>
-              </li>
-              <li>
-                <span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C#
-                </span>
-              </li>
-              <li>
-                <span
-                  class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
-                  University Project
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
+          <a href="projects/easy-dialogue-editor.html"
+            class="project-card-link"
+            title="Open EasyDialogueEditor project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/EasyDialogueEditor.png" alt="EasyDialogueEditor cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/EasyDialogueEditor.png"
+                  class="project-card__video"
+                  src="assets/videos/EasyDialogueEditor.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">EasyDialogueEditor (2025)</h3>
+                <p class="project-card__summary">A FOSS, lightweight and platform agnostic
+                  dialogue tree editor for games.</p>
+                <ul class="tag-list" aria-label="technologies used">
+                  <li><span class="tag">C++</span></li>
+                  <li><span class="tag">ImGui</span></li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="mdi:account" width="14" height="14"></iconify-icon>
+                      Personal project
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
 
-      <!-- Row 3: Just Click Start (col-start-3) -->
-      <a href="projects/just-click-start.html"
-        class="group block md:col-span-4 md:col-start-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open Just Click Start page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/JustClickStartLogo.png" alt="Just Click Start cover"
-              class="absolute inset-0 w-full h-full object-cover" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/JustClickStartLogo.png"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/JustClickStart_Reel.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">Just Click Start (2025)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">My team's game jam submission, developed entirely in 2 days.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="logos:unity" width="14" height="14" class="block text-current dark:invert"></iconify-icon>
-                  Unity
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C#
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100"><iconify-icon icon="mingcute:game-1-line"
-                    width="14" height="14" class="block"></iconify-icon>
-                  Game Jam
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
+        </div>
+      </section>
 
-      <!-- Row 3: Cartoon Campout (col-start-7) -->
-      <a href="projects/cartooncampout.html"
-        class="group block md:col-span-4 md:col-start-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
-        title="Open Cartoon Campout project page">
-        <figure
-          class="card group relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card w-full cursor-pointer transition-colors duration-150 transform transition-transform duration-200 ease-out hover:scale-[1.01]">
-          <div class="relative w-full pt-[56.25%] overflow-hidden">
-            <img src="assets/images/CartoonCampoutLogo.png" alt="Cartoon Campout cover"
-              class="absolute inset-0 w-full h-full object-cover object-[50%_25%]" />
-            <video muted playsinline loop preload="metadata" poster="assets/images/CartoonCampoutLogo.png"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
-              src="assets/videos/CartoonCampoutVid.mp4"></video>
-          </div>
-          <figcaption
-            class="p-3 border-t border-lineLight/70 dark:border-lineDark/70 bg-white/70 dark:bg-transparent transition-colors duration-150">
-            <h3 class="text-sm m-0">Cartoon Campout (2024)</h3>
-            <p class="text-xs text-mutedLight dark:text-mutedDark m-0">Short Mixed Reality portal experiment.</p>
-            <ul class="mt-2 flex flex-wrap gap-2" aria-label="technologies used">
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="bi:headset-vr" width="14" height="14"></iconify-icon>
-                  XR
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#E7E7EB] bg-[#F3F3F2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="logos:unity" width="14" height="14" class="block text-current dark:invert"></iconify-icon>
-                  Unity
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  C#
-                </span>
-              </li>
-              <li>
-                <span class="inline-flex items-center h-6 px-2.5 py-0 gap-1.5 text-[11px] leading-none font-medium
-               rounded-full border border-[#e7e7eb] bg-[#f3f3f2] text-zinc-800
-               dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100">
-                  <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
-                  University Related
-                </span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-      </a>
 
+      <section class="project-group" aria-labelledby="games-heading">
+        <div class="project-group__header">
+          <h3 id="games-heading" class="project-group__title">Games</h3>
+        </div>
+
+        <div class="project-grid">
+          <a href="projects/TheShapeOfSilence.html"
+            class="project-card-link"
+            title="Open The Shape Of Silence project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/ShapeOfSilenceLogo.png" alt="The Shape Of Silence cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/ShapeOfSilenceLogo.png"
+                  class="project-card__video"
+                  src="assets/videos/TheShapeOfSilence-ShowReel.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">The Shape Of Silence (WIP)</h3>
+                <p class="project-card__summary">First person narrative puzzle game, exploring themes of guilt and complicity.</p>
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="logos:unrealengine-icon" width="14" height="14"
+                        class="tag__icon tag__icon--invert"></iconify-icon>
+                      UE5
+                    </span>
+                  </li>
+                  <li><span class="tag">C++</span></li>
+                  <li><span class="tag">FMOD</span></li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="mdi:account" width="14" height="14"></iconify-icon>
+                      Personal Project
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
+
+
+          <a href="projects/forlorn.html"
+            class="project-card-link"
+            title="Open Forlorn project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/forlorn.png" alt="Forlorn cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/forlorn.png"
+                  class="project-card__video"
+                  src="assets/videos/forlorn.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">Forlorn (2024)</h3>
+                <p class="project-card__summary">Fast paced FPS game with platforming. Inspired by Doom.</p>
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="logos:unity" width="14" height="14" class="tag__icon tag__icon--invert"></iconify-icon>
+                      Unity
+                    </span>
+                  </li>
+                  <li><span class="tag">C#</span></li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                      University Project
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="projects/the-naturals-descent.html"
+            class="project-card-link"
+            title="Open The Naturals' Descent project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/TND_new_cover.jpg" alt="The Naturals' Descent cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/TND_new_cover.jpg"
+                  class="project-card__video"
+                  src="assets/videos/TND.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">The Naturals' Descent (2024)</h3>
+                <p class="project-card__summary">Action-Adventure puzzle game.</p>
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="logos:unity" width="14" height="14" class="tag__icon tag__icon--invert"></iconify-icon>
+                      Unity
+                    </span>
+                  </li>
+                  <li><span class="tag">C#</span></li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                      University Project
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
+
+
+          <a href="projects/just-click-start.html"
+            class="project-card-link"
+            title="Open Just Click Start page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/JustClickStartLogo.png" alt="Just Click Start cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/JustClickStartLogo.png"
+                  class="project-card__video"
+                  src="assets/videos/JustClickStart_Reel.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">Just Click Start (2025)</h3>
+                <p class="project-card__summary">My team's game jam submission, developed entirely in 2 days.</p>
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="logos:unity" width="14" height="14" class="tag__icon tag__icon--invert"></iconify-icon>
+                      Unity
+                    </span>
+                  </li>
+                  <li><span class="tag">C#</span></li>
+                  <li>
+                    <span class="tag"><iconify-icon icon="mingcute:game-1-line"
+                        width="14" height="14"></iconify-icon>
+                      Game Jam
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
+
+
+      <section class="project-group" aria-labelledby="mixed-reality-heading">
+        <div class="project-group__header">
+          <h3 id="mixed-reality-heading" class="project-group__title">Mixed Reality / VR</h3>
+        </div>
+
+        <div class="project-grid">
+          <a href="projects/dynamicsr.html"
+            class="project-card-link"
+            title="Open Dynamic Substitutional Reality System project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/Thesis/SideBySide2.jpg" alt="Dynamic Substitutional Reality System cover"
+                  class="project-card__image" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/Thesis/SideBySide2.jpg"
+                  class="project-card__video"
+                  src="assets/videos/DynamicSR-TeaserVideo.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title"><i>History of Writing</i>: A Dynamic Substitutional Reality System Case Study
+                  (2025)</h3>
+                <p class="project-card__summary">The case study for my master thesis. An XR museum experience.</p>
+                <ul class="tag-list" aria-label="technologies used">
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="bi:headset-vr" width="14" height="14"></iconify-icon>
+                      XR
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="logos:unity" width="14" height="14" class="tag__icon tag__icon--invert"></iconify-icon>
+                      Unity
+                    </span>
+                  </li>
+                  <li><span class="tag">C#</span></li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                      Master Thesis
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
+
+          <a href="projects/cartooncampout.html"
+            class="project-card-link"
+            title="Open Cartoon Campout project page">
+            <figure class="card project-card">
+              <div class="project-card__media">
+                <img src="assets/images/CartoonCampoutLogo.png" alt="Cartoon Campout cover"
+                  class="project-card__image project-card__image--cartoon" />
+                <video muted playsinline loop preload="metadata" poster="assets/images/CartoonCampoutLogo.png"
+                  class="project-card__video"
+                  src="assets/videos/CartoonCampoutVid.mp4"></video>
+              </div>
+              <figcaption class="project-card__body">
+                <h3 class="project-card__title">Cartoon Campout (2024)</h3>
+                <p class="project-card__summary">Short Mixed Reality portal experiment.</p>
+                <ul class="tag-list" aria-label="technologies used">
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="bi:headset-vr" width="14" height="14"></iconify-icon>
+                      XR
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="logos:unity" width="14" height="14" class="tag__icon tag__icon--invert"></iconify-icon>
+                      Unity
+                    </span>
+                  </li>
+                  <li><span class="tag">C#</span></li>
+                  <li>
+                    <span class="tag">
+                      <iconify-icon icon="mdi:academic-cap" width="14" height="14"></iconify-icon>
+                      University Related
+                    </span>
+                  </li>
+                </ul>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+      </section>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="mt-12">
 
-    <h2 class="text-lg font-medium mb-2">About Me</h2>
+<!-- Skills -->
+<section id="skills" class="section-block">
+  <h2 class="section-title">Skills</h2>
 
-    <p class="text-mutedLight dark:text-mutedDark">
-      I'm a 23 year old <b>M.Sc. in Computer Science and Engineering </b> with a passion for game development. 
-    </p>
+  <div class="skills-card">
+    <dl class="skills-grid">
+      <div class="skills-item">
+        <dt class="skills-label">Programming Languages</dt>
+        <dd class="skills-copy">
+          C++, C#, Python, LUA, Java, TypeScript, OCaml
+        </dd>
+      </div>
 
-    <br>
+      <div class="skills-item">
+        <dt class="skills-label">Graphics</dt>
+        <dd class="skills-copy">
+          OpenGL, Vulkan, ImGui, GLFW, SDL3, WebGL, OpenCV, QGIS
+        </dd>
+      </div>
 
-    <p class="text-mutedLight dark:text-mutedDark">
-    I am currently working as a software engineer in the automotive industry doing safety-critical C++ programming of car software components. In my free, I enjoy studying graphics programming, game software architecture and general game development.
-    </p>
+      <div class="skills-item">
+        <dt class="skills-label">Engines &amp; Tools</dt>
+        <dd class="skills-copy">
+          Unreal Engine 5, Unity, FMOD, Blender, Photoshop, Audacity
+        </dd>
+      </div>
 
-    <br>
+      <div class="skills-item">
+        <dt class="skills-label">Build &amp; Documentation</dt>
+        <dd class="skills-copy">
+          Bazel, CMAKE, Doxygen, Sphinx, Jinja
+        </dd>
+      </div>
 
-    <p class="text-mutedLight dark:text-mutedDark">
-      I used to use Unity and Unreal Engine quite a lot, but currently I have been mostly dedicating my free time to low-level game programming.
-    </p>
+      <div class="skills-item">
+        <dt class="skills-label">Workflow tools</dt>
+        <dd class="skills-copy">
+          RenderDoc, Docker, Linux Shell, VIM, Git, Jira
+        </dd>
+      </div>
 
-  </section>
+      <div class="skills-item">
+        <dt class="skills-label">Databases</dt>
+        <dd class="skills-copy">
+          PostgreSQL, SQLite
+        </dd>
+      </div>
+
+      <div class="skills-item skills-item--wide">
+        <dt class="skills-label">Languages</dt>
+        <dd class="skills-copy">
+          Portuguese (native), English (proficient)
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
 
   <!-- Education -->
-  <section id="education" class="mt-10">
-    <h2 class="text-lg font-medium mb-3">Education</h2>
+  <section id="education" class="section-block">
+    <h2 class="section-title">Education</h2>
 
-    <a href="https://www.fct.unl.pt/en" target="_blank" rel="noopener" class="group block no-underline hover:no-underline focus:no-underline
-            focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-xl2"
+    <a href="https://www.fct.unl.pt/en" target="_blank" rel="noopener" class="education-link"
       title="Open Nova School of Science and Technology">
-      <div class="relative overflow-hidden rounded-xl2 border border-lineLight dark:border-lineDark
-             bg-white/70 dark:bg-panelDark shadow-card p-4 cursor-pointer
-             transition-colors duration-150 transform transition-transform duration-200 ease-out
-             hover:scale-[1.01]">
-        <h3 class="text-xl font-semibold">
+      <div class="simple-card education-card">
+        <h3 class="education-card__title">
           Nova School of Science and Technology (2020–2025)
         </h3>
-        <p class="mt-2 text-sm text-mutedLight dark:text-mutedDark">
+        <p class="education-card__text">
           B.Sc. + M.Sc. in Computer Science and Engineering
         </p>
       </div>
     </a>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="mt-10">
-    <h2 class="text-lg font-medium mb-3">Skills</h2>
-
-    <div class="rounded-xl2 border border-lineLight dark:border-lineDark bg-white/70 dark:bg-panelDark shadow-card p-4">
-      <dl class="grid gap-4 sm:grid-cols-2">
-        <div>
-          <dt class="font-medium">Programming Languages</dt>
-          <dd class="text-base text-mutedLight dark:text-mutedDark">
-            C++, C#, Python, Lua, OCaml, HLSL
-          </dd>
-        </div>
-        <div>
-          <dt class="font-medium">Game Engines</dt>
-          <dd class="text-base text-mutedLight dark:text-mutedDark">
-            Unreal Engine 4/5, Unity, FMOD
-          </dd>
-        </div>
-        <div>
-          <dt class="font-medium">Frameworks and APIs</dt>
-          <dd class="text-base text-mutedLight dark:text-mutedDark">
-            OpenGL, SDL, Win32, GLFW, ImGui, Docker, Jinja
-          </dd>
-        </div>
-        
-        <div>
-          <dt class="font-medium">My Toolset</dt>
-          <dd class="text-base text-mutedLight dark:text-mutedDark">
-            Git, Shell, VIM
-          </dd>
-        </div>
-        
-        <div>
-          <dt class="font-medium">Creative Software</dt>
-          <dd class="text-base text-mutedLight dark:text-mutedDark">
-            Blender (Basics), Photoshop, DaVinci Resolve
-          </dd>
-        </div>
-        <div class="sm:col-span-2">
-          <dt class="font-medium">Languages</dt>
-          <dd class="text-base text-mutedLight dark:text-mutedDark">
-            Portuguese (native), English (proficient)
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </section>
 
 
   <!-- Contact -->
-  <section id="contact" class="mt-10 mb-28">
-    <h2 class="text-lg font-medium mb-2">Contact</h2>
+  <section id="contact" class="section-block contact-section">
+    <h2 class="section-title">Contact</h2>
     <p>
-      <a class="underline cursor-pointer" href="mailto:gr.figueira@proton.me">gr.figueira@proton.me</a>
+      <a class="copy-link" href="mailto:gr.figueira@proton.me">gr.figueira@proton.me</a>
     </p>
   </section>
-</main>
 {% endblock %}

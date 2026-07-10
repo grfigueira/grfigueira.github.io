@@ -1,20 +1,20 @@
 ---
 layout: layouts/project.njk
-permalink: "projects/opengl-3d-renderer.html"
+permalink: "projects/papoila-3d-engine.html"
 
 intro:
-  title: "OpenGL 3D Renderer (WIP)"
-  summary: "Simple 3D renderer built from scratch with OpenGL and C++."
+  title: "Papoila Game Engine (WIP)"
+  summary: "Simple 3D game engine built from scratch with OpenGL and C++."
   chips:
     - "Team size: 1"
-    - "Time Frame: Ongoing (since July 2025)"
-    - "Tools: C++, OpenGL, ImGui"
+    - "Time Frame: Ongoing (since January 2026)"
+    - "Tools: C++, OpenGL, GLFW, ImGui"
   actions:
     - label: "Source Code"
       href: "https://github.com/grfigueira/Papoila-Engine"
       primary: false
       icon: "/assets/icons/github.svg"        # file icon
-      icon_class: "w-5 h-5 dark:invert"
+      icon_class: "action-icon action-icon--invert"
   header_gif: "/assets/gifs/OpenGL.gif"
   header_alt: "Showcase overview"
 
@@ -22,23 +22,25 @@ sections:
   - type: "text"
     heading: "Introduction"
     text: |
-      This is a personal project where I am building a simple 3D renderer from scratch using C++ and OpenGL. The goal of this project is to deepen my understanding of graphics programming and the underlying principles of 3D rendering and game engines. 
+      This is a personal project where I am building a simple 3D game engine from scratch using C++ and OpenGL. The goal of this project is to deepen my understanding of graphics programming and underlying game engine architecture. No better way to learn how game engines work than building one myself.
       <br><br>
       For this project I am following the amazing 
       
       <a href="https://learnopengl.com/"
-      class="text-emerald-700 dark:text-emerald-300 underline-offset-2 decoration-emerald-400/40
-          hover:underline focus:underline hover:text-emerald-800 dark:hover:text-emerald-200
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-sm"
+      class="copy-link"
       target="_blank" rel="noopener noreferrer">Learn OpenGL</a>
       
       online book as a guide while also taking creative liberties to implement additional features.
-      So far I have implemented basic rendering of <strong>textured 3D cubes</strong>, <strong>flying camera controls</strong>, a simple <strong>settings UI</strong> using ImGui and a <strong>fog effect</strong>.
+
+      So far I have implemented <i>assimp</i> model loading, textured mesh rendering, phong lighting, cubemap skyboxes, editor camera controls, a basic editor GUI, and built in proximity dithering because why not.
+      
       <br><br>
-      My goal is to keep growing this project into a simple 3D engine that I can use to make games in the future. The idea of having an engine that I fully understand and with an architecture designed by me is very appealing.
+
+      My goal is to keep growing this project into a proper small 3D engine that I can use to make games in the future. Eventually I also want to play around with adding LUA scripting, FMOD integration for audio (<i>because no one does it better than them</i>) and Box3D physics integration.
+
   - type: "video"
     heading: "Video Presentation"
-    text: "A short video showcasing the current state of the project."
+    text: "A short video showcasing a very early and primitive version. I don't currently have a more up to date video"
     youtube_id: "UMGGPG60SzM"
 
   - type: "text"
@@ -46,9 +48,7 @@ sections:
     text: |
       This project taught me a lot about the fundamentals of 3D graphics programming. I had never worked directly with OpenGL before, so implementing basic 3D rendering techniques from scratch gave me a better understanding of how real-time rendering works, giving me valuable insights into how engines like Unity and Unreal function under the hood. This was also around the time I started reading the 
       <a href="https://www.gameenginebook.com/"
-      class="text-emerald-700 dark:text-emerald-300 underline-offset-2 decoration-emerald-400/40
-          hover:underline focus:underline hover:text-emerald-800 dark:hover:text-emerald-200
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 rounded-sm"
+      class="copy-link"
       target="_blank" rel="noopener noreferrer">Game Engine Architecture</a>
       book by Jason Gregory, which further solidified my understanding of game engines.
 
