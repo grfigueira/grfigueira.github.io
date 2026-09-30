@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap">
+  <title>Guilherme Figueira — Portfolio</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  
+
+  <main id="main" class="site-main">
+    
+
+
+<header class="site-header">
+  <div class="site-header__inner site-header__inner--project">
+    <a href="/#projects" class="brand-link">Guilherme Figueira</a>
+  </div>
+</header>
+
+
+
+
+<nav class="back-nav">
+  <a href="/#projects"
+    class="back-link">
+    <span aria-hidden="true">←</span>
+    Back to projects
+  </a>
+</nav>
+
+
+<section class="project-intro content-section">
+  <div class="project-intro__layout">
+    <div class="project-intro__content">
+      <h1 class="project-title">The Naturals&#39; Descent</h1>
+      <p class="project-summary">The Naturals' Descent was developed as a group project assignment for the Games and Simulations course at Nova University. The group was composed of 2 programmers, and we also had some help with the world building and story telling from another friend.</p>
+
+      
+      <div class="chip-list">
+        
+        <span class="chip">Team size: 2</span>
+        
+        <span class="chip">Time Frame: 10 weeks</span>
+        
+        <span class="chip">Engine: Unity (C#)</span>
+        
+      </div>
+      
+
+      
+      <div class="action-list">
+        
+        <a href="/assets/documents/GDD-TheNaturalsDescent.pdf" target="_blank" rel="noopener"
+          class="button button--primary">
+
+          
+          
+          <img src="/assets/icons/document.svg" alt="" aria-hidden="true" class="action-icon">
+          
+
+          
+          
+
+          View GDD (PDF)
+        </a>
+        
+        <a href="https://github.com/GamesAndSimulation/ga2024-G2-11" target="_blank" rel="noopener"
+          class="button button--secondary">
+
+          
+          
+          <img src="/assets/icons/github.svg" alt="" aria-hidden="true" class="action-icon action-icon--invert">
+          
+
+          
+          
+
+          Source Code
+        </a>
+        
+        <a href="https://gfigueira.itch.io/the-naturals-descent" target="_blank" rel="noopener"
+          class="button button--secondary">
+
+          
+          
+          <img src="/assets/icons/itchdotio.svg" alt="" aria-hidden="true" class="action-icon action-icon--invert">
+          
+
+          
+          
+
+          Play on itch.io
+        </a>
+        
+      </div>
+      
+    </div>
+
+    
+    
+    
+
+    <div class="project-intro__media-shell" style="--header-w: 420px;">
+      <div class="project-intro__media-frame">
+        <img src="/assets/gifs/TND.gif" alt="Gameplay loop overview" class="media-fill"
+          loading="lazy">
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+
+
+
+
+<section class="content-section">
+  <h2 class="section-title">Introduction</h2>
+  <p class="body-copy">This was the bigger final project for the Games and Simulations university course. We were given full creative freedom and so we decided to try and create a relatively ambitious action-adventure first person shooter, set in a steampunk desert world. The player can explore the desert in a hover board, fight AI enemies and solve puzzles inside of procedurally generated underground mazes.
+
+The following sections showcase some of my core contributions to the project.
+</p>
+</section>
+
+
+
+
+
+<section class="content-section content-section--narrow">
+  <h2 class="section-title">Video Presentation</h2>
+  <p class="body-copy">Video showcasing the game and the implementation of the core mechanics. It was required for the project submission.</p>
+  <div class="embed-frame">
+    <iframe class="embed-frame__media" src="https://www.youtube-nocookie.com/embed/isLo5lBK4to?rel=0"
+      title="Video" loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="content-section">
+  <h2 class="section-title">Wave Function Collapse</h2>
+  <p class="body-copy">For the underground caverns, we knew we wanted them to be procedurally generated. I challenged myself to implement this procedural generation using the Wave Function Collapse algorithm. Because of the project's ever-closing deadline and since we didn't really need verticality in the caverns, I applied the 2D version of the algorithm using 3D meshes as the possible tiles.</p>
+
+  <div class="media-grid">
+    
+    <figure class="media-card">
+      <img src="/assets/gifs/WFCTiles.gif" alt="" class="media-card__image" loading="lazy">
+      <figcaption class="media-card__caption">The 3D meshes used as tiles and assignment of side tags.
+      </figcaption>
+    </figure>
+    
+    <figure class="media-card">
+      <img src="/assets/gifs/WFCVIZU.gif" alt="" class="media-card__image" loading="lazy">
+      <figcaption class="media-card__caption">Visualization of the Wave Function Collapse algorithm in action.
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+
+
+
+<section class="content-section">
+  <h2 class="section-title">Hover Board Mechanic</h2>
+  <p class="body-copy">For exploring the desert, we wanted the player to be able to ride some kind of vehicle. We decided that a hover board would be a cool and fitting choice for our steampunk world. The mechanic was inspired by the hover bike found in the game Sable.</p>
+
+  <div class="media-grid">
+    
+    <figure class="media-card">
+      <img src="/assets/gifs/TNDBoardInAction.gif" alt="" class="media-card__image" loading="lazy">
+      <figcaption class="media-card__caption">Visual demonstration of the hover board physics.
+      </figcaption>
+    </figure>
+    
+    <figure class="media-card">
+      <img src="/assets/gifs/TNDHoverBoard.gif" alt="" class="media-card__image" loading="lazy">
+      <figcaption class="media-card__caption">Hover board in action, exploring the desert.
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+
+
+<section class="content-section">
+  <h2 class="section-title">What I learned</h2>
+  <p class="body-copy">This project taught me a lot about collaborating during game development. Even though our team was small, just two programmers, I really enjoyed the exchange of ideas and the process of brainstorming solutions together. <br><br>
+
+It was also the first time I worked in devising a detailed Game Design Document (GDD) before starting development. I learned how helpful it is to have a clear vision from the start to keep the scope realistic and maintain focus during implementation. <br><br>
+
+Another challenge was resolving Git merge conflicts in a game development context. While I was already familiar with resolving git merge conflicts, working with many binary and structured files made conflict resolution trickier. I learned how to handle these safely and prevent project corruption.
+</p>
+</section>
+
+
+
+
+<section class="content-section source-section">
+  <aside class="source-section__aside">
+    <h2 class="section-title">Source Code</h2>
+    <div class="source-card">
+      <div class="source-card__header">
+        <div class="source-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.8-.25.8-.57v-2.2c-3.26.71-3.95-1.4-3.95-1.4-.53-1.33-1.3-1.68-1.3-1.68-1.06-.74.08-.72.08-.72 1.17.08 1.79 1.21 1.79 1.21 1.04 1.78 2.74 1.26 3.4.96.11-.76.41-1.26.75-1.55-2.6-.3-5.34-1.3-5.34-5.82 0-1.29.46-2.34 1.21-3.17-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.21a11.1 11.1 0 0 1 5.82 0c2.22-1.52 3.2-1.21 3.2-1.21.63 1.65.23 2.87.12 3.17.75.83 1.21 1.88 1.21 3.17 0 4.53-2.74 5.52-5.36 5.82.42.36.8 1.07.8 2.17v3.22c0 .32.21.69.81.57A11.5 11.5 0 0 0 12 .5z" />
+          </svg>
+        </div>
+        <div>
+          <p class="source-card__provider">GitHub
+          </p>
+          <p class="source-card__repo">GamesAndSimulation / ga2024-G2-11</p>
+        </div>
+      </div>
+
+      
+      <p class="source-card__note">You can find the full source code in the following Git repository.</p>
+      
+
+      <a href="https://github.com/GamesAndSimulation/ga2024-G2-11" target="_blank" rel="noopener"
+        class="button button--secondary">
+        Visit repository <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </aside>
+</section>
+
+
+
+
+
+
+  </main>
+
+  
+
+  <footer class="site-footer">
+    Portfolio Last Updated: 2026/07
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

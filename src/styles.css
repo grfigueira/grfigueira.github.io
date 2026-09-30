@@ -52,7 +52,7 @@ body {
     var(--bg);
   color: var(--text);
   font-family: "Manrope", sans-serif; 
-  font-size: 17px;
+  font-size: 17.5px;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
@@ -527,6 +527,11 @@ dd {
   list-style: none;
   margin: auto 0 0;
   padding: 0.8rem 0 0;
+}
+
+.tag-list > li {
+  display: flex;
+  align-items: center;
 }
 
 .tag {
